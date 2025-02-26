@@ -14,6 +14,24 @@
 //    - Works the same way for positive values, since we always check `Math.max(nums[i], curr_sum + nums[i])`.  
 
 // Summary: No need to check negatives manually. Kadane’s already ensures we either continue or restart.  
+//VARIATIONS
+/*Since you are currently focusing on array-based questions,you can gradually move toward related concepts.Here’s an ideal next step roadmap for you:
+
+1 ️⃣Standard Kadane’s Variations(Strengthen Core)
+✅LeetCode#53-Maximum Subarray(Basic Kadane’s)
+✅LeetCode#152-Maximum Product Subarray(Kadane’s with min/max tracking)
+✅LeetCode#918-Maximum Sum Circular Subarray(Kadane’s with circular array handling)
+
+Sliding Window Problems(Gradual Shift)Sliding Window is useful for problems involving contiguous subarrays with constraints.
+
+✅LeetCode#209-Minimum Size Subarray Sum(Smallest subarray sum≥target)
+✅LeetCode#424-Longest Repeating Character Replacement(Dynamic sliding window)
+✅LeetCode#1004-Max Consecutive Ones III(Kadane+Sliding Window for binary array problems)
+
+Prefix Sum+Binary Search(Needed for 2D Problems)Before jumping into 2D Kadane’s,it’s good to get comfortable with prefix sum concepts.
+
+✅LeetCode#560-Subarray Sum Equals K(Find subarrays with sum exactly k using prefix sum+HashMap)
+✅LeetCode#974-Subarray Sums Divisible by K(Variation using modulo prefix sum)
 
 class Solution {
     public int maxSubArray(int[] nums) {
