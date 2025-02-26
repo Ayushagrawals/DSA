@@ -1,3 +1,7 @@
+//It's similar to the three sum problem only things to be take care is takes O(n2) and two loops we are computing 4 no of sum
+// two will come in the first and last third will come in the first loop and fourth will come in the last loop.
+//Issue i faced is with the it should be first<last while we skip the duplicate and we should increment first++ last-- in case 
+// we find the sum.
 
 import java.util.*;
 
