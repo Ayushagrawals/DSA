@@ -31,7 +31,7 @@ Sliding Window Problems(Gradual Shift)Sliding Window is useful for problems invo
 Prefix Sum+Binary Search(Needed for 2D Problems)Before jumping into 2D Kadane’s,it’s good to get comfortable with prefix sum concepts.
 
 ✅LeetCode#560-Subarray Sum Equals K(Find subarrays with sum exactly k using prefix sum+HashMap)
-✅LeetCode#974-Subarray Sums Divisible by K(Variation using modulo prefix sum)
+✅LeetCode#974-Subarray Sums Divisible by K(Variation using modulo prefix sum)*/
 
 class Solution {
     public int maxSubArray(int[] nums) {
