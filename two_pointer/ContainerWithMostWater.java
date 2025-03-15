@@ -1,5 +1,5 @@
 
-//ITs a two pointer problem we want to find max imum water trapped we need to calcualte index difference mtuliplied by the min 
+//ITs a two pointer problem we want to find maximum water trapped we need to calcualte index difference mtuliplied by the min 
 // of right and left index vaules and if the left index value is less we move right that is left++ and similarly right--
 //
 import java.util.Stack;
