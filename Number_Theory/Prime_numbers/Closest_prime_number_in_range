@@ -1,0 +1,62 @@
+//Here as this question is based on prime number in range we can do seive concept in which each number from 2
+//will mark it's multiple and only prime number has no factor will remain we initialize every number as 0
+// and the number divide will become 1 and prime number stay as 0.
+// So after doing that we need to find the pair which are closest in range so for that we need two number
+//hence we created first and second the part where i got confused was we need to calcualte min diff two so we
+//need extra variable for that and we need to maintain across array so we need curr element as well.
+//and also we need to keep track of first and second so once we find new pair we will update first=second
+//so this way for next iteration as second will be updated we have first as previous element and we are
+//saving also in ans array as well.
+
+//Q - 2523. Closest Prime Numbers in Range
+class Solution {
+    public int[] closestPrimes(int left, int right) {
+        int [] arr=new int[right+1];
+        arr[0]=1;
+        arr[1]=1;
+        for(int i=2;i<arr.length;i++)
+        {
+            arr[i]=0;
+        }
+        for(int i=2;i*i<right+1;i++)
+        {
+            for(int j=i*i;j<right+1;j+=i)
+            {
+                arr[j]=1;
+            }
+        }
+        int first=-1;
+        int second=-1;
+        int mindiff=Integer.MAX_VALUE;
+        int ans[]=new int[2];
+        int curr=0;
+        ans[0]=-1;
+        ans[1]=-1;
+        
+        for(int i=left;i<arr.length;i++)
+        {
+            if(arr[i]==0)
+            {
+                if(first==-1)
+                {
+                   
+                    first=i;
+                }
+                else{
+                    second=i;
+                    curr=second-first;
+                    if(mindiff>curr)
+                    {
+                        mindiff=curr;
+                        ans[0]=first;
+                        ans[1]=second;
+                    }    
+                    first=second;
+                }
+                
+               
+            }
+        }
+        return ans;
+    }
+}

@@ -11,6 +11,9 @@
 //we know that this working we need to find the min answer so will move to left that ny right=mid; if it's not then it means
 //we need higher capacity and we will make left=mid+1; and then finally return the left that is the min.
 
+//when it is written like that we want to mimimize the max it means we are minimizing after finding the answer we are moving towrds the left and in the 
+//loop we are moing towards the right vice versa in case of maximizing the the min
+
 class Solution {
     public int shipWithinDays(int[] weights, int days) {
 
