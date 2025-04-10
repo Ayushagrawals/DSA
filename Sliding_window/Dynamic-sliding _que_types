@@ -1,0 +1,82 @@
+Absolutely! Here's a curated **list of Sliding Window + Map (Dynamic Window) problems**, categorized by **difficulty** and **common patterns** like tracking frequencies, distinct elements, etc. These involve *dynamic window resizing*, making them great for mastering patterns like yours (`Longest Substring with At Most K Distinct Characters`).
+
+---
+
+### 🟢 **Easy (Starter Dynamic Window + Map)**
+
+1. **Longest Substring Without Repeating Characters**  
+   Leetcode 3  
+   👉 Track frequencies to ensure no char is repeated.  
+   *(Map + Set-based variations)*
+
+2. **Longest Substring with At Most Two Distinct Characters**  
+   Leetcode 159  
+   👉 The one you just did. Classic dynamic window.  
+
+3. **Longest Substring with At Most K Distinct Characters**  
+   Leetcode 340  
+   👉 Generalized version of above (K given).
+
+4. **Find All Anagrams in a String**  
+   Leetcode 438  
+   👉 Fixed window, but use map to match character counts.
+
+5. **Permutation in String**  
+   Leetcode 567  
+   👉 Another fixed-size window + frequency comparison.
+
+---
+
+### 🟡 **Medium (Dynamic + Conditional Logic)**
+
+6. **Minimum Window Substring**  
+   Leetcode 76  
+   👉 Maintain target frequency + match count; shrink window optimally.
+
+7. **Longest Repeating Character Replacement**  
+   Leetcode 424  
+   👉 Dynamic window, replace at most `k` characters to form repeating substring.
+
+8. **Substrings with Exactly K Distinct Characters**  
+   Leetcode 992  
+   👉 Variation of "At Most K" → Use two At Most K counts and subtract.
+
+9. **Fruit Into Baskets**  
+   Leetcode 904  
+   👉 Same as "Longest Substring with At Most 2 Distinct Characters", just framed with fruits.
+
+---
+
+### 🔴 **Hard (Advanced Sliding + Map Logic)**
+
+10. **Substring with Concatenation of All Words**  
+    Leetcode 30  
+    👉 Requires checking multiple word matches in a dynamic window.
+
+11. **Minimum Window Subsequence**  
+    Leetcode 727  
+    👉 Not pure sliding window, but combines subsequence + window idea.
+
+12. **Count Number of Nice Subarrays**  
+    Leetcode 1248  
+    👉 Sliding window for subarrays with exactly K odd numbers (binary sliding idea).
+
+13. **Sliding Window Median**  
+    Leetcode 480  
+    👉 Multiset / TreeMap / Heap for maintaining dynamic window median.
+
+---
+
+### Summary Table
+
+| Difficulty | Problem Name                                    | Key Technique                   |
+|------------|--------------------------------------------------|---------------------------------|
+| Easy       | Longest Substring Without Repeat                | Map + Set, Dynamic window       |
+| Easy       | At Most Two Distinct                            | Map + Size control              |
+| Medium     | Minimum Window Substring                        | Map + Match tracking            |
+| Medium     | Longest Repeating Replacement                   | Max freq + shrink window        |
+| Hard       | Sliding Window Median                           | TreeMap / Heap + Sliding        |
+
+---
+
+Want me to build you a **custom roadmap or LeetCode list** to follow through these?
