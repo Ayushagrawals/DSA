@@ -1,0 +1,53 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		String s= "eceba";
+		int start=0;
+		int end=0;
+		String ans="";
+		int maxlen=0;
+		Map<Character,Integer> m=new HashMap<Character,Integer>();
+		for(int i=0;i<s.length();i++)
+		{
+		   
+		   
+		        
+		    if(m.containsKey(s.charAt(i)))
+		    {
+		        int val=m.get(s.charAt(i));
+		        m.put(s.charAt(i),val+1);
+		    }
+		    else{
+		        m.put(s.charAt(i),1);
+		    }
+		    end++;
+		
+		
+		    while(m.size()>2)
+		    {
+		        int val=m.get(s.charAt(start));
+		        if(val>1)
+		        m.put(s.charAt(start),val-1);
+		        else
+		        m.remove(s.charAt(start));
+		        start++;
+		    }
+		
+		 if(maxlen<i-start+1)
+		    {
+		    ans = s.substring(start, i + 1);
+		    maxlen=Math.max(maxlen,i-start+1);
+		    }
+		}
+		
+	
+		System.out.println(ans);
+
+	}
+}
