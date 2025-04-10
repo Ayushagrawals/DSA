@@ -1,0 +1,75 @@
+Great question! 🌟 Yes — we can **categorize sliding window problems** into different types based on:
+
+- Whether the window size is **fixed or dynamic** ✅
+- What **data structure** is used: **map**, **set**, **array**, **deque**, etc.
+- What the **goal** is: max length, min length, count, index, etc.
+
+---
+
+### ✅ 1. **Fixed Size Sliding Window**
+- **Window size `k` is known**, and you slide it across the array/string.
+- Usually uses **arrays** or **queues**.
+  
+#### 🧠 Common Goals:
+- Max/Min sum
+- Average of window
+- Max/Min value in window (with deque)
+
+#### 🔥 Examples:
+- **LC 239**: Sliding Window Maximum *(deque)*
+- **LC 643**: Maximum Average Subarray I
+- **LC 480**: Sliding Window Median *(multiset or heaps)*
+
+---
+
+### ✅ 2. **Dynamic Size Sliding Window**
+- Window size varies depending on a condition.
+- Usually involves **map**, **set**, or **frequency arrays**.
+
+#### 🧠 Common Goals:
+- Longest substring with at most K distinct characters
+- Longest substring without repeating characters
+- Minimum window containing all characters
+
+#### 🔥 Examples:
+- **LC 3**: Longest Substring Without Repeating Characters *(set/map)*
+- **LC 76**: Minimum Window Substring *(map + two maps technique)*
+- **LC 159**: Longest Substring with At Most Two Distinct Characters *(this one!)*
+- **LC 340**: Longest Substring with At Most K Distinct Characters *(generalized version)*
+
+---
+
+### ✅ 3. **Count-Based Sliding Window**
+- You count how many windows satisfy a certain property.
+
+#### 🔥 Examples:
+- **LC 567**: Permutation in String
+- **LC 438**: Find All Anagrams in a String
+  - Use **char frequency map/array** + count of matches
+
+---
+
+### ✅ 4. **Two Pointers Variant (Like Sliding Window but With Conditions)**
+- A form of sliding window often used for sorted arrays or specific problems like subarrays/substrings with sums or products.
+
+#### 🔥 Examples:
+- **LC 992**: Subarrays with K Different Integers *(two-pointer + map)*
+- **LC 1248**: Count Number of Nice Subarrays
+
+---
+
+### ✅ 5. **Deque-Based Sliding Window**
+- Used for tracking min/max in O(1) inside the window
+
+#### 🔥 Example:
+- **LC 239**: Sliding Window Maximum
+
+---
+
+### ✅ 6. **Prefix Sum + Sliding Window Hybrid**
+- Especially when dealing with **sums** over subarrays
+- Sometimes better than a brute sliding window
+
+---
+
+Let me know if you want a **cheat sheet of patterns with key Leetcode problems** under each category! It’ll make revision super fast.
