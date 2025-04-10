@@ -1,0 +1,37 @@
+Absolutely! 🔥 Here's a focused list of **Variable-Size Sliding Window Problems** — all **subarray-based**, using **two pointers** to dynamically grow/shrink the window based on constraints.
+
+---
+
+## 🧠 What Makes It "Variable"?
+- You don’t fix the window to a size `k`.
+- Instead, you grow the window (`end++`) and shrink from the left (`start++`) when some **condition is violated** (product, sum, distinct count, etc.)
+
+---
+
+## ✅ Must-Do Variable Sliding Window Problems (Subarray Focus)
+
+| # | Problem Title                                                                 | Key Concept                                | Technique          |
+|---|-------------------------------------------------------------------------------|---------------------------------------------|--------------------|
+| 1 | **Longest Substring Without Repeating Characters**                          | No repeats allowed                          | HashSet / HashMap  |
+| 2 | **Longest Substring with At Most K Distinct Characters**                    | ≤ K unique characters                       | HashMap + Count    |
+| 3 | **Subarrays with At Most K Distinct Integers**                              | Count subarrays with ≤ K unique elements    | HashMap + Shrink   |
+| 4 | **Count Substrings with Exactly K Distinct Characters**                     | Exactly K distinct → (atMostK - atMostK-1)  | Trick + HashMap    |
+| 5 | **Number of Subarrays with Product Less Than K**                            | Product < K                                 | Two pointers       |
+| 6 | **Maximum Number of Vowels in a Substring of Given Length (K)**             | Fixed size but you may confuse it as var    | Set + Count        |
+| 7 | **Minimum Size Subarray Sum**                                               | Smallest subarray with sum ≥ target         | Sum + Shrink       |
+| 8 | **Max Consecutive Ones III**                                                | Flip at most `k` zeros                      | Count 0’s + Shrink |
+| 9 | **Longest Subarray of 1's After Deleting One Element**                      | One delete allowed → careful shrinking      | Count 0’s          |
+| 10| **Sliding Window Maximum** (can also be seen as variable by logic pattern)  | Track max using deque                       | Monotonic deque    |
+
+---
+
+## 🧪 Difference from Fixed Sliding Window:
+| Fixed Window                               | Variable Window                                 |
+|--------------------------------------------|-------------------------------------------------|
+| Window size = constant (like size `k`)      | Window size grows/shrinks dynamically           |
+| Classic problems: max sum, vowels in k len | Substring/subarray problems with constraints    |
+| Usually one pointer loop                   | Needs two pointers to maintain dynamic window   |
+
+---
+
+Let me know if you want a **roadmap to solve all these in 3-4 days** or want to **start dry-running a tricky one** like "Subarrays with Product Less Than K"!
