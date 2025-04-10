@@ -1,0 +1,73 @@
+# Sliding Window Pattern: Master Guide
+
+Sliding window is a core pattern in many array and string problems. Here's a complete breakdown with categories, concepts, and when to use fixed-size vs dynamic window.
+
+---
+
+## ✅ Sliding Window Categories
+
+### 1. **Fixed Size Window (Classic Sliding Window)**
+- Use when the **window size is given (e.g., k)**.
+- Typically use two pointers and maintain a window of size `k`.
+- Often pre-calculate the first window separately.
+
+**Examples:**
+- Maximum sum of subarray of size `k`
+- Maximum in sliding window of size `k` (Deque based)
+- Max vowels in a substring of length `k`
+- First negative number in every window of size `k`
+- Max average of subarray of length `k`
+- Anagram detection (`window size = p.length()`)
+
+### 2. **Variable Size Window (Dynamic Sliding Window)**
+- Use when window size is **not fixed**, determined by conditions like:
+  - Unique characters
+  - At most / exactly `k` distinct characters
+  - Subarray with sum ≥ or ≤ target
+
+**Examples:**
+- Longest substring without repeating characters
+- Longest substring with at most `k` distinct characters
+- Count substrings with exactly `k` distinct characters
+- Number of subarrays with product less than `k`
+- Smallest subarray with sum ≥ `target`
+- Minimum window substring
+
+
+---
+
+## 🧠 Do I Need to Build the First Window Separately?
+
+| Problem Type                                | Fixed Size? | Build First Window? |
+|---------------------------------------------|-------------|----------------------|
+| Max/Min/Sum/Average of size `k`             | ✅          | ✅ Yes               |
+| Anagram/Permutation detection               | ✅          | ✅ Yes               |
+| Longest substring without repeating chars   | ❌          | ❌ No                |
+| At most/Exactly K distinct substrings       | ❌          | ❌ No                |
+| Subarray with sum/product < or ≥ target     | ❌          | ❌ No                |
+| Minimum window substring                    | ❌          | ❌ No                |
+
+---
+
+## 🤔 Tips to Identify the Type
+
+- **Given k?** → Fixed size
+- **Asked for max/min in window of k?** → Fixed size
+- **Asked for longest/shortest substring/subarray with a condition?** → Variable size
+- **Condition depends on distinct characters, sum, product, or uniqueness?** → Variable size
+
+---
+
+## 🧰 Patterns Summary
+
+| Pattern Type         | Uses HashMap? | Uses Deque? | Use Case                              |
+|----------------------|---------------|-------------|----------------------------------------|
+| Classic Fixed Size   | ❌ Sometimes  | ❌/✅        | Max sum, max vowels, anagram, etc.     |
+| Monotonic Deque      | ❌            | ✅          | Max/Min in window of size `k`          |
+| HashMap-based        | ✅            | ❌          | Unique/repeated/at most `k` problems   |
+| Two Pointers Dynamic | ✅ Sometimes  | ❌          | Subarrays/strings with condition       |
+
+---
+
+Want to include a categorized list of top 20 problems next?
+
