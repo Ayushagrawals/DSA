@@ -1,0 +1,102 @@
+Here’s the structured list of subarray problems with categories, explanation, and must-practice questions:
+
+---
+
+## 📂 **Subarray Problems by Category**
+
+### 🔹 **1. Fixed-Size Sliding Window**
+For problems where the window size is fixed.
+
+- **Key Idea**: Use a single loop and maintain a window of size `k` using sum or count.
+- **Examples**:
+  1. **[Max Sum of Subarray of Size K](https://leetcode.com/problems/maximum-average-subarray-i/)**
+  2. **[Max Vowels in a Substring](https://leetcode.com/problems/maximum-number-of-vowels-in-a-substring-of-given-length/)**
+  3. **First Negative Number in Every Window of Size K** (custom problem).
+
+---
+
+### 🔹 **2. Variable-Size Sliding Window**
+For dynamic conditions like *at most/exactly K* or meeting a target.
+
+- **Key Idea**: Use two pointers (`start` and `end`) to adjust the window dynamically.
+- **Examples**:
+  1. **[Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)**
+  2. **[Subarray Product Less Than K](https://leetcode.com/problems/subarray-product-less-than-k/)**
+  3. **[At Most K Distinct Characters](https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters/)**
+  4. **[Count Substrings with Exactly K Distinct Characters](https://www.geeksforgeeks.org/count-substrings-with-exactly-k-distinct-characters/)**
+  5. **[Longest Subarray with Sum at Most K](https://leetcode.com/problems/maximum-size-subarray-sum-equals-k/)**
+
+---
+
+### 🔹 **3. Prefix Sum / HashMap-Based**
+For problems involving sum constraints or specific frequencies.
+
+- **Key Idea**: Use prefix sums and hashmaps to store cumulative sums or frequencies.
+- **Examples**:
+  1. **[Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/)**
+  2. **[Count Nice Subarrays (Odd Count)](https://leetcode.com/problems/count-number-of-nice-subarrays/)**
+  3. **[Contiguous Array](https://leetcode.com/problems/contiguous-array/)** (0s and 1s balance).
+  4. **[Longest Subarray with Sum 0](https://practice.geeksforgeeks.org/problems/largest-subarray-with-0-sum/1)**
+
+---
+
+### 🔹 **4. Kadane’s Algorithm**
+For finding maximum/minimum subarray sum.
+
+- **Key Idea**: Maintain a `currentMax` and update a `globalMax`.
+- **Examples**:
+  1. **[Maximum Subarray (Kadane’s Algorithm)](https://leetcode.com/problems/maximum-subarray/)**
+  2. **[Max Sum Circular Subarray](https://leetcode.com/problems/maximum-sum-circular-subarray/)**
+  3. **[Max Sum of Two Non-Overlapping Subarrays](https://leetcode.com/problems/maximum-sum-of-two-non-overlapping-subarrays/)**
+
+---
+
+### 🔹 **5. Monotonic Deque**
+For efficient max/min computation in a sliding window.
+
+- **Key Idea**: Use a deque to store indices in decreasing/increasing order.
+- **Examples**:
+  1. **[Maximum in Sliding Window](https://leetcode.com/problems/sliding-window-maximum/)**
+  2. **[Shortest Subarray with Sum at Least K](https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/)**
+
+---
+
+### 🔹 **6. Backtracking/Brute Force**
+For generating or explicitly analyzing subarrays.
+
+- **Key Idea**: Explore all combinations of subarrays (time-intensive).
+- **Examples**:
+  1. Generate All Subarrays (custom implementation).
+  2. **[Subarrays with XOR Equal to K](https://www.geeksforgeeks.org/count-number-subarrays-given-xor/)** (can be optimized).
+
+---
+
+## 🚀 **Recommended Practice Plan**
+### Day 1: Fixed-Size Sliding Window
+- **Max Sum of Subarray of Size K**
+- **Max Vowels in a Substring**
+
+### Day 2: Variable-Size Sliding Window
+- **Longest Substring Without Repeating Characters**
+- **Subarray Product Less Than K**
+- **Count Substrings with Exactly K Distinct Characters**
+
+### Day 3: Prefix Sum / HashMap-Based
+- **Subarray Sum Equals K**
+- **Count Nice Subarrays**
+
+### Day 4: Kadane’s Algorithm
+- **Maximum Subarray**
+- **Max Sum Circular Subarray**
+
+### Day 5: Monotonic Deque
+- **Maximum in Sliding Window**
+- **Shortest Subarray with Sum at Least K**
+
+### Day 6: Brute Force & Misc
+- Generate All Subarrays
+- Subarrays with XOR Equal to K
+
+---
+
+Do you want detailed explanations or dry runs for specific problems? Let me know!
