@@ -1,0 +1,78 @@
+Yes! Prefix Sum itself has multiple sub-categories or **patterns** — just like Sliding Window. The beauty of prefix sum is in how it's combined with **arrays**, **hashmaps**, or **modulo** to solve different types of subarray problems efficiently.
+
+---
+
+### ✅ **Prefix Sum Patterns (Categorized)**
+
+---
+
+### 🔹 1. **Basic Prefix Sum for Range Queries**
+- Just compute the cumulative sum and use it to get range sums in O(1).
+- Useful when you get multiple queries on subarray sums.
+
+**Examples:**
+- [Range Sum Query - Immutable](https://leetcode.com/problems/range-sum-query-immutable/)
+- [Prefix Sum array construction problems]
+
+---
+
+### 🔹 2. **Count Subarrays with Exact Sum using Prefix Sum + HashMap**
+- Core idea: If `prefixSum[j] - prefixSum[i] = k`, then subarray `i to j-1` has sum `k`.
+- We track counts of prefix sums using a HashMap.
+
+**Examples:**
+- [Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/)
+- [Continuous Subarray Sum](https://leetcode.com/problems/continuous-subarray-sum/)
+- Count number of nice subarrays (exactly k odd numbers)
+
+---
+
+### 🔹 3. **Subarray Sum with Modulo (Prefix Sum + HashMap + %)**  
+- Use when you see **"sum divisible by k"** or **remainder-based grouping**.
+- Store `prefixSum % k` in HashMap.
+
+**Examples:**
+- [Subarray Sums Divisible by K](https://leetcode.com/problems/subarray-sums-divisible-by-k/)
+- [Check if Array Has Subarray of Sum Multiple of K](https://leetcode.com/problems/continuous-subarray-sum/)
+
+---
+
+### 🔹 4. **Subarrays with Equal Count or Balance (0s/1s → Prefix Balance)**
+- Convert problem to "balanced prefix sum"
+- Common trick: convert 0 → -1 to reduce to subarray with sum `0`
+
+**Examples:**
+- [Contiguous Array (equal 0s and 1s)](https://leetcode.com/problems/contiguous-array/)
+- [Binary Subarrays with Sum](https://leetcode.com/problems/binary-subarrays-with-sum/)
+
+---
+
+### 🔹 5. **Prefix Sum in 2D Grids (Matrix)**
+- You’ll get a matrix and need to compute region sums fast.
+- Convert to 2D prefix sum and use inclusion-exclusion.
+
+**Examples:**
+- [Range Sum Query 2D - Immutable](https://leetcode.com/problems/range-sum-query-2d-immutable/)
+- Matrix sum region problems
+
+---
+
+### 🔹 6. **Prefix Sum + Sliding Window**
+- Combo pattern: sliding window checks range and prefix sum gives you sum in O(1).
+- Rare but useful.
+
+**Examples:**
+- [Maximum Average Subarray I (prefix sum + sliding)](https://leetcode.com/problems/maximum-average-subarray-i/)
+
+---
+
+### 🔹 7. **Prefix Sum with XOR (Bit Manipulation variant)**
+- Some advanced problems use prefix XOR instead of sum.
+
+**Examples:**
+- [Count Number of Nice Subarrays (XOR based)](https://leetcode.com/problems/count-number-of-nice-subarrays/)
+- [Subarrays with XOR equal to K (GFG / InterviewBit)]
+
+---
+
+Would you like a **Prefix Sum Master Sheet** next with problem links, categories, and how to identify which pattern it is? I can also pair each with a short dry run example.
