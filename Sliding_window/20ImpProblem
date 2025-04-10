@@ -1,0 +1,109 @@
+Perfect! Here's a curated list of **20 sliding window problems**, categorized by pattern — covering all major variations like **fixed size**, **variable size**, **hashmap-based**, **deque-based**, and **at most/exactly K** questions. All of these are commonly asked in product companies like **Walmart, Amazon, Adobe, Microsoft**, etc.
+
+---
+
+### 🟩 **1. Classic Fixed-Size Window**
+These use a fixed `k` window and involve **sum, count, or average**.
+
+1. **Maximum Sum Subarray of Size K**  
+   _Leetcode 643_: Max sum of any subarray of size `k`.
+
+2. **First Negative Number in Every Window of Size K**  
+   _GFG_: Maintain the first negative number using a queue.
+
+3. **Count Occurrences of Anagrams**  
+   _Leetcode 438_: Same as finding all anagrams.
+
+---
+
+### 🟨 **2. Variable-Size Window with HashMap**
+These focus on **distinct/unique/repeat** character tracking.
+
+4. **Longest Substring Without Repeating Characters**  
+   _Leetcode 3_: Track last seen index using HashMap.
+
+5. **Longest Substring with At Most K Distinct Characters**  
+   _Leetcode 340_: Classic map-based pattern.
+
+6. **Longest Substring with Exactly K Distinct Characters**  
+   _Variation_: Use two “at most K” subtractions.
+
+7. **Minimum Window Substring**  
+   _Leetcode 76_: Harder version using two maps.
+
+8. **Permutation in String**  
+   _Leetcode 567_: Use frequency maps (like anagram).
+
+---
+
+### 🟦 **3. Deque-Based Sliding Window (Monotonic Queue)**
+Used for **max/min** in a window. Not prefix-sum based.
+
+9. **Sliding Window Maximum**  
+   _Leetcode 239_: Maintain decreasing deque.
+
+10. **Sliding Window Minimum**  
+    _Variation_: Same logic, but increasing deque.
+
+11. **Sum of Min and Max of All Subarrays of Size K**  
+    _GFG_: Use 2 deques (one min, one max).
+
+---
+
+### 🟥 **4. Advanced Variable Window (Product/Count Based)**
+Mostly **two-pointer** based.
+
+12. **Number of Subarrays with Product Less Than K**  
+   _Leetcode 713_: Product, shrink window when `>= K`.
+
+13. **Subarrays with Sum Less Than K**  
+   _Variation_: Similar to the above with sum.
+
+14. **Max Consecutive Ones III**  
+   _Leetcode 1004_: Flip at most `k` zeroes using window.
+
+---
+
+### 🟪 **5. Count-Based HashMap Questions**
+Involve matching frequencies.
+
+15. **Find All Anagrams in a String**  
+   _Leetcode 438_: Frequency map + sliding window.
+
+16. **Check Inclusion of a Permutation**  
+   _Leetcode 567_: Same logic, early return.
+
+17. **Find All Duplicates in a Sliding Window**  
+   _Variation_: Track duplicates within the window.
+
+---
+
+### 🟫 **6. Tricky Edge Case: Count Subarrays with Exactly K Distinct**
+Requires **at most K - at most (K - 1)** trick.
+
+18. **Count Substrings with Exactly K Distinct Characters**  
+   _Hard but useful_: Implement both “at most” helpers.
+
+---
+
+### 🟨 **7. Other Patterns (Hybrid)**
+19. **Max Vowels in a Substring of Given Length**  
+   _Leetcode 1456_: Fixed window + set lookup.
+
+20. **Minimum Size Subarray Sum**  
+   _Leetcode 209_: Shrink window to minimum size.
+
+---
+
+### 🧠 Tips to Identify Pattern:
+| Problem Type                  | Use          | Keywords                              |
+|------------------------------|---------------|----------------------------------------|
+| **Fixed-Size (Classic)**     | Sum, Max, Avg | "size k", "maximum sum"               |
+| **HashMap-Based**            | Count chars   | "distinct", "repeating", "frequency"  |
+| **Deque-Based**              | Max/Min       | "maximum in window", "min in window"  |
+| **At Most/Exactly K**        | Count substrs | "at most k", "exactly k"              |
+| **Two Pointers/Product/Sum** | Subarrays     | "product < k", "sum < k"              |
+
+---
+
+Would you like this in a Markdown file as a **README** with links or explanations for each next?
