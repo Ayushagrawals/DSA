@@ -100,3 +100,78 @@ For generating or explicitly analyzing subarrays.
 ---
 
 Do you want detailed explanations or dry runs for specific problems? Let me know!
+
+
+Perfect — I’ll create a structured plan for all **subarray-based problem types**, similar to what we did with **sliding window**, and also prepare a **Prefix Sum Master Sheet** with identification tips and problem categories.
+
+We’ll break subarray problems into the following categories:
+
+### 🔹 1. **Fixed-Size Sliding Window**
+**Identification Clues:**  
+- Window size `k` is given  
+- Need to track sum, max, or average over size `k`  
+**Examples:**  
+- Max sum of subarray of size `k`  
+- Max average of subarray of size `k`
+
+---
+
+### 🔹 2. **Variable-Size Sliding Window (Two Pointer)**
+**Identification Clues:**  
+- Constraints like "at most k", "at least", or "longest/shortest subarray with some condition"  
+- Conditions on sum, product, or unique count  
+**Examples:**  
+- Longest subarray with sum ≤ k  
+- Number of subarrays with product < k  
+- Longest substring with at most k distinct characters
+
+---
+
+### 🔹 3. **Kadane’s Algorithm (Max Subarray Sum)**
+**Identification Clues:**  
+- Subarray needs to be contiguous  
+- Max or min sum is asked  
+**Examples:**  
+- Maximum subarray sum  
+- Maximum circular subarray sum  
+- Maximum alternating sum
+
+---
+
+### 🔹 4. **Prefix Sum (Cumulative Sum / Difference Array)**
+**Identification Clues:**  
+- You’re counting number of subarrays with **exact sum**, or need fast range sum  
+- Subarrays with **equal number of elements**, e.g. 0s and 1s  
+- Target sum matching  
+**Examples:**  
+- Subarray sum equals `k`  
+- Count subarrays with sum divisible by `k`  
+- Count subarrays with equal number of 0s and 1s  
+- Count number of nice subarrays
+
+---
+
+### 🔹 5. **HashMap + Prefix Sum**
+**Identification Clues:**  
+- You're counting **number of subarrays**, not just finding one  
+- Target-based counting  
+**Examples:**  
+- Count subarrays with sum `k`  
+- Count subarrays with at most `k` odd numbers  
+- Count subarrays with exactly `k` distinct characters (atMostK(x) - atMostK(x-1))
+
+---
+
+### 🔹 6. **Backtracking / DFS**
+**Identification Clues:**  
+- When subarray is not necessarily contiguous or needs combinations  
+- Common in string/array combination variants  
+**Examples:**  
+- Subsets and subarrays (for small input sizes)  
+- Partition into palindromes (on string)
+
+---
+
+Once we finish the master list, I’ll also highlight the **top Leetcode + Walmart favorites** from each category, and prepare dry runs and patterns for Prefix Sum just like we did for sliding window.
+
+Would you like to begin with **Prefix Sum Master Sheet** or do a quick **revision sheet for Kadane’s + Variable Sliding Window** first?
