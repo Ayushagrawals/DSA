@@ -1,0 +1,37 @@
+//You are visiting a farm that has a single row of fruit trees arranged from left to right. The trees are represented by an integer array fruits where fruits[i] is the type of fruit the ith tree produces.
+
+//You want to collect as much fruit as possible. However, the owner has some strict rules that you must follow:
+
+//You only have two baskets, and each basket can only hold a single type of fruit. There is no limit on the amount of fruit each basket can hold.
+//Starting from any tree of your choice, you must pick exactly one fruit from every tree (including the start tree) while moving to the right. The picked fruits must fit in one of your baskets.
+//Once you reach a tree with fruit that cannot fit in your baskets, you must stop.
+//Given the integer array fruits, return the maximum number of fruits you can pick.
+
+//same as two distinct
+class Solution {
+    public int totalFruit(int[] fruits) {
+        Map<Integer,Integer> m=new HashMap<Integer,Integer>();
+        int start=0;
+        int end=0;
+        int maxfruit=0;
+        for(int i=0;i<fruits.length;i++)
+        {
+            
+            m.put(fruits[i],m.getOrDefault(fruits[i],0)+1);
+            while(m.size()>2)
+            {
+                if(m.get(fruits[start])>1)
+                {
+                    int val=m.get(fruits[start]);
+                    m.put(fruits[start],val-1);
+                }
+                else{
+                    m.remove(fruits[start]);
+                }
+            start+=1;
+            }
+            maxfruit=Math.max(maxfruit,i-start+1);
+        }
+        return maxfruit;
+    }
+}
