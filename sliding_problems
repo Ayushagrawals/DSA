@@ -1,0 +1,108 @@
+Absolutely! Here's the **correct and complete categorized list** of sliding window + subarray problems — tailored for FAANG/Walmart-level interviews — based on our discussions. This is **cleaned up with corrected categorization**, and you can directly use this as a **README structure** in your repo.
+
+---
+
+## ✅ Subarray Problem Patterns – Master List
+
+To master all **subarray-based questions**, organize them into key categories:
+
+---
+
+### 🟩 1. **Fixed Size Sliding Window**  
+➡️ Window size is exactly `k`  
+➡️ Use simple window of `k` elements and slide it across the array  
+➡️ Typically max/min/sum/average in `k` elements  
+
+| Problem | Leetcode | Notes |
+|--------|----------|-------|
+| Maximum Sum Subarray of Size K | [LC 643](https://leetcode.com/problems/maximum-average-subarray-i/) | Sum-based |
+| Max Number of Vowels in a Substring of Given Length | [LC 1456](https://leetcode.com/problems/maximum-number-of-vowels-in-a-substring-of-given-length/) | Vowel count |
+| Find All Anagrams in a String | [LC 438](https://leetcode.com/problems/find-all-anagrams-in-a-string/) | Anagram detection |
+| Permutation in String | [LC 567](https://leetcode.com/problems/permutation-in-string/) | Sliding + hashmap |
+| Maximum Average Subarray I | [LC 643](https://leetcode.com/problems/maximum-average-subarray-i/) | Just like sum but with average |
+
+---
+
+### 🟨 2. **Variable Size Sliding Window / Two Pointer**  
+➡️ Window size expands/shrinks dynamically  
+➡️ Often used when condition must be satisfied while trying to minimize/maximize window size  
+
+| Problem | Leetcode | Notes |
+|--------|----------|-------|
+| **✅ Corrected** Minimum Size Subarray Sum | [LC 209](https://leetcode.com/problems/minimum-size-subarray-sum/) | Shrinkable window |
+| Longest Substring Without Repeating Characters | [LC 3](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | HashSet-based |
+| Longest Substring with At Most K Distinct Characters | [LC 340](https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters/) | HashMap + two pointer |
+| Subarrays with K Different Integers | [LC 992](https://leetcode.com/problems/subarrays-with-k-different-integers/) | Tricky — done with `atMost(K) - atMost(K-1)` |
+| Number of Subarrays with Product Less Than K | [LC 713](https://leetcode.com/problems/subarray-product-less-than-k/) | Multiplicative variant |
+| Minimum Window Substring | [LC 76](https://leetcode.com/problems/minimum-window-substring/) | Classic two-pointer + hashmap |
+
+---
+
+### 🟥 3. **Monotonic Queue / Deque-Based Sliding Window**  
+➡️ Use deque to maintain order of elements (max/min) in current window  
+➡️ Needed when you want to get **max/min in current window** in `O(1)`  
+
+| Problem | Leetcode | Notes |
+|--------|----------|-------|
+| Sliding Window Maximum | [LC 239](https://leetcode.com/problems/sliding-window-maximum/) | Deque-based max |
+| Sliding Window Minimum | (Custom Variant) | Monotonic deque (increasing) |
+| Shortest Subarray with Sum at Least K | [LC 862](https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/) | Use deque + prefix sum |
+| Sum of Subarray Minimums | [LC 907](https://leetcode.com/problems/sum-of-subarray-minimums/) | Monotonic stack variation |
+| Maximum of All Subarrays of Size K | [GFG Variant](https://www.geeksforgeeks.org/sliding-window-maximum-maximum-of-all-subarrays-of-size-k/) | Commonly asked |
+
+---
+
+### 🟦 4. **Prefix Sum Based Subarray Problems**  
+➡️ Great when you're looking for total sum or count across multiple ranges  
+➡️ Carries over cumulative values to get constant-time sum lookup  
+
+| Problem | Leetcode | Notes |
+|--------|----------|-------|
+| Subarray Sum Equals K | [LC 560](https://leetcode.com/problems/subarray-sum-equals-k/) | Prefix sum + hashmap |
+| Continuous Subarray Sum | [LC 523](https://leetcode.com/problems/continuous-subarray-sum/) | Check modulo over prefix sum |
+| Shortest Subarray with Sum at Least K | [LC 862](https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/) | Prefix + Monotonic Queue |
+| Number of Subarrays That Sum to Target | [LC 930](https://leetcode.com/problems/binary-subarrays-with-sum/) | Binary array only |
+
+---
+
+### 🟪 5. **Kadane’s Algorithm Based (Max Subarray Sum)**  
+➡️ Focuses on finding **maximum sum contiguous subarray**  
+➡️ Greedy + prefix sum idea
+
+| Problem | Leetcode | Notes |
+|--------|----------|-------|
+| Maximum Subarray | [LC 53](https://leetcode.com/problems/maximum-subarray/) | Classic Kadane’s |
+| Maximum Sum Circular Subarray | [LC 918](https://leetcode.com/problems/maximum-sum-circular-subarray/) | Wrap around version |
+
+---
+
+### 🟫 6. **Backtracking-Based Subarray Exploration**  
+➡️ Usually exponential, avoid unless problem is very constrained  
+➡️ Not efficient for long inputs — used in unique combinations/subarrays  
+
+| Problem | Leetcode | Notes |
+|--------|----------|-------|
+| All Subsets / Power Set | [LC 78](https://leetcode.com/problems/subsets/) | Not truly sliding window |
+| Subsets with Duplicates | [LC 90](https://leetcode.com/problems/subsets-ii/) | Deduping via backtracking |
+
+---
+
+## ✅ Summary: Topics to Master Subarray Questions
+To master **90–95% subarray problems**, focus on:
+
+| Concept | Category |
+|--------|----------|
+| Fixed Size Sliding Window | Sum, avg, count in fixed k |
+| Variable Size Sliding Window | Dynamic window + 2 pointers |
+| Prefix Sum | Carries over sum for fast lookup |
+| Monotonic Queue | Max/Min in a range in O(1) |
+| Kadane’s Algo | Max subarray sum in greedy style |
+
+---
+
+Let me know if you want:
+- A **checklist version** to track what’s done  
+- A **spreadsheet tracker** with difficulty, patterns, and mistakes  
+- Or **handpicked ones** from FAANG/Walmart for each category to speed up prep  
+
+Ready to grind? 🔥
