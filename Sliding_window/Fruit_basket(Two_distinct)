@@ -7,7 +7,7 @@
 //Once you reach a tree with fruit that cannot fit in your baskets, you must stop.
 //Given the integer array fruits, return the maximum number of fruits you can pick.
 
-//same as two distinct
+//same as two distinct here two bucket is the hashmap size and all should be picked so it is subarray  can't be skipped
 class Solution {
     public int totalFruit(int[] fruits) {
         Map<Integer,Integer> m=new HashMap<Integer,Integer>();
