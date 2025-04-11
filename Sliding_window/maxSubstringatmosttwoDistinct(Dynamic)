@@ -1,3 +1,5 @@
+//To make sure the size of map should not exceed the two because of two distinct character if it exceed we will remove while it's size is greter and
+//update the start by 1
 import java.util.*;
 import java.lang.*;
 import java.io.*;
@@ -14,10 +16,7 @@ class Codechef
 		int maxlen=0;
 		Map<Character,Integer> m=new HashMap<Character,Integer>();
 		for(int i=0;i<s.length();i++)
-		{
-		   
-		   
-		        
+		{ 
 		    if(m.containsKey(s.charAt(i)))
 		    {
 		        int val=m.get(s.charAt(i));
