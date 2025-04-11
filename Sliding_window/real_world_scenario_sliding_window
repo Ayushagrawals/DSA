@@ -1,0 +1,32 @@
+Sure! Here's a categorized list of **sliding window problems** (fixed-size and variable-size) with **real-world analogies** to help you connect the patterns.  
+
+---
+
+### **Fixed-Size Sliding Window Problems**
+
+| **Problem**                        | **Pattern**         | **Real-World Analogy**                                                                 |
+|------------------------------------|---------------------|---------------------------------------------------------------------------------------|
+| **Maximum Sum Subarray of Size K** | Fixed-size window   | Monitoring CPU usage every second, calculate the peak usage over a 5-second window.  |
+| **Max Consecutive Ones II**        | Fixed-size window   | Flipping bits in a stream of binary data to optimize data transfer in chunks of size K. |
+| **Moving Average from Data Stream**| Fixed-size window   | Calculating the rolling average of temperatures over a 7-day period.                 |
+
+---
+
+### **Variable-Size Sliding Window Problems**
+
+| **Problem**                                | **Pattern**                 | **Real-World Analogy**                                                                                       |
+|--------------------------------------------|-----------------------------|-------------------------------------------------------------------------------------------------------------|
+| **Longest Substring Without Repeating Characters** | Expand and shrink window   | Typing a password where no character can repeat consecutively — find the longest valid password sequence.   |
+| **Fruit Into Baskets (At Most 2 Distinct)**| Expand and shrink window   | Picking fruits with 2 baskets — each basket holds one type of fruit.                                        |
+| **Longest Substring with At Most K Distinct Characters** | Expand and shrink window | Streaming live video, where a limited buffer stores frames of at most K different resolutions.              |
+| **Minimum Size Subarray Sum**             | Shrinking window condition | Downloading files in chunks — minimize the number of chunks required to exceed a certain size threshold.    |
+| **Max Vowels in Substring of Given Length**| Fixed-size with properties  | Measuring the "sweetness" in a flavor profile by counting vowels in fixed-length chunks of a review text.    |
+| **Subarray Product Less Than K**          | Shrinking window condition | Calculating product demand for a grocery store, keeping product counts under budget K.                      |
+
+---
+
+### How This Helps:
+- **Fixed-size problems:** Often involve calculating a **rolling measure** like max/min/sum/average for a **constant-sized chunk**.
+- **Variable-size problems:** Focus on **meeting a condition** (e.g., at most K distinct items, minimum sum) and adjusting the window dynamically.
+
+Do you want me to focus on **any specific sliding window problem** from this list and explain it in more detail?
