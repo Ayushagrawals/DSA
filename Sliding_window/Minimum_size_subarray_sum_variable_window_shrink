@@ -1,0 +1,23 @@
+//Given an array of positive integers nums and a positive integer target, return the minimal length of a subarray whose sum is greater than or equal to target. If there is no such subarray, return 0 instead.
+class Solution {
+    public int minSubArrayLen(int target, int[] nums) {
+        int start=0;
+        int end=0;
+        int sum=0;
+        int minlength=Integer.MAX_VALUE;
+        for(int i=0;i<nums.length;i++)
+        {
+            sum+=nums[i];
+            while(sum>=target){
+                minlength=Math.min(minlength,i-start+1);
+                sum-=nums[start];
+                start++;
+            }
+        }
+        if(minlength==Integer.MAX_VALUE)
+        {
+            return 0;
+        }
+        return minlength;
+    }
+}
