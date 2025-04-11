@@ -1,0 +1,24 @@
+//this question is unique because we ned to store the alst inex as we want the non reopating chaaracter so we will moce foarawrd also we want to make
+//sure to update start it should be max(start,lastindex) because lastindex could go bakward if last occourence of element was at backward. this way
+//window is alway unique this is important qusiton and also we will calculate the maxlength either it's added or not added with hashmap
+class Solution {
+    public int lengthOfLongestSubstring(String s) {
+        Map<Character,Integer> m=new HashMap<Character,Integer>();
+        int maxlength=0;
+        int start=0;
+        for(int i=0;i<s.length();i++)
+        {
+            if(!m.containsKey(s.charAt(i)))
+            {
+                m.put(s.charAt(i),i);
+                
+            }
+            else{
+                start = Math.max(start, m.get(s.charAt(i))+1);
+                m.put(s.charAt(i), i);
+            }
+            maxlength=Math.max(i-start+1,maxlength);
+        }
+        return maxlength;
+    }
+}
