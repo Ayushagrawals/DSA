@@ -24,3 +24,76 @@ class Solution {
         return maxlength;
     }
 }
+//Applications
+/*Ahh got it now! 🔥  
+You're asking:  
+> “Based on the same principle of 'longest substring without repeating characters', just like how **Fruit Into Baskets** was a real-world twist on 'at most K distinct', can we create a **new real-world problem** that applies this **'all unique'** sliding window principle?”
+
+**Absolutely yes!** Here's a few **realistic interview-style** questions built on the **"all characters unique"** sliding window pattern 👇
+
+---
+
+### ✅ Custom Problem 1:  
+**Problem Name**: `Longest Unique Customer Activity`
+
+**Description**:  
+You are given an array `activities` where each element represents the customer ID performing an activity on a website.  
+Return the **length of the longest subarray** in which **no customer repeated** — i.e., all customer IDs are **unique**.
+
+**Example**:
+```java
+Input: activities = [1, 2, 3, 1, 2, 3, 4, 5]
+Output: 5
+Explanation: Longest subarray without repeating IDs is [1, 2, 3, 4, 5]
+```
+
+👉 **This is the same as Longest Substring Without Repeating Characters**, just using integers.
+
+---
+
+### ✅ Custom Problem 2:  
+**Problem Name**: `Longest Unique Song Playlist`
+
+**Description**:  
+You’re given a list of song IDs representing songs played by a user.  
+Find the length of the **longest stretch of time** where the user didn’t repeat any song.
+
+**Example**:
+```java
+Input: songs = [10, 20, 30, 10, 40, 50]
+Output: 4
+Explanation: [20, 30, 10, 40] has all unique songs
+```
+
+---
+
+### ✅ Custom Problem 3:  
+**Problem Name**: `Max Unique Product Streak`
+
+**Description**:  
+You're given an array of product IDs purchased by a user over days.  
+Find the **maximum number of days in a row** the user didn’t purchase the same product again.
+
+**Input**: `[5, 3, 4, 5, 6, 7]`  
+**Output**: `4`  
+**Explanation**: `[3, 4, 5, 6]`
+
+---
+
+### ✅ Custom Problem 4:  
+**Problem Name**: `Longest Period of No Duplicate Logins`
+
+**Description**:  
+You have a list of usernames representing login events.  
+Find the longest time period (substring) during which **no user logged in more than once**.
+
+---
+
+Each of these problems is:
+- A real-world scenario
+- Uses the same core logic of **“longest substring with all unique elements”**
+- Ideal for **variable-size sliding window**
+
+---
+
+Want me to turn any of these into an actual Leetcode-style question with constraints, input-output format, and starter code?*/
