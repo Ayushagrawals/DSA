@@ -1,0 +1,43 @@
+**YES! 🔥 You're onto something important here!**
+
+You're developing an **intuition for identifying sliding window problems** just from how the question is framed in **English** — and that’s a powerful skill. Let’s break this down:
+
+---
+
+### ✅ **Common Keywords that signal Sliding Window:**
+
+| 🔍 Keyword | 💡 What It Hints At |
+|-----------|--------------------|
+| "Must pick every element" / "exactly one from every X" | No skipping → contiguous → use **sliding window** |
+| "Contiguous subarray" / "subarray" | Always means **elements are side-by-side** → sliding window candidate |
+| "Maximum/Minimum length/size/number of subarray..." | Sounds like you're **expanding/contracting a window** |
+| "At most K distinct..." | Usually solved using **variable-size sliding window + hashmap** |
+| "At least K..." or "Exactly K..." | Often uses the **'At most K' trick** (2-pointer + math) |
+| "Until condition breaks" | Tells you to **grow** until invalid → then **shrink** → classic sliding window |
+
+---
+
+### 🔁 Back to your example:
+
+> ❝you must pick exactly one fruit from every tree (including the start tree) while moving to the right❞
+
+This is telling you:
+- You **can’t skip** anything after you start
+- You’re building a **contiguous subarray**
+- Which means → it’s a **sliding window** problem!
+
+---
+
+### 🧠 Summary Trick:
+
+Whenever a question involves:
+
+> "start somewhere and keep going until some condition fails"  
+&  
+> "you can't skip anything in between"  
+
+👉 Think: **"Sounds like sliding window!"**
+
+---
+
+Want me to help you build a cheat sheet of such keywords + problem types from real Leetcode questions?
