@@ -1,0 +1,46 @@
+//EVEN
+public class Main
+{
+	public static void main(String[] args) {
+	    int[] a={2,3,4,5,6,7};
+	    int[] p=new int[a.length];
+	    p[0]=a[0];
+	    for(int i=1;i<a.length;i++)
+	    {
+	       if(i%2!=0)
+	       {
+	           p[i]=p[i-1];
+	       }
+	       else{
+	           p[i]=p[i-1]+a[i];
+	       }
+	    }
+	    for(int val:p)
+	    {
+	        System.out.print(val+" ");
+	    }
+	}
+}
+//ODD
+public class Main
+{
+	public static void main(String[] args) {
+	    int[] a={2,3,4,5,6,7};
+	    int[] p=new int[a.length];
+	    p[0]=0;
+	    for(int i=1;i<a.length;i++)
+	    {
+	       if(i%2==0)
+	       {
+	           p[i]=p[i-1];
+	       }
+	       else{
+	           p[i]=p[i-1]+a[i];
+	       }
+	    }
+	    for(int val:p)
+	    {
+	        System.out.print(val+" ");
+	    }
+	}
+}
