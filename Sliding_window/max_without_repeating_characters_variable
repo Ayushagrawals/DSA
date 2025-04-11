@@ -1,3 +1,5 @@
+//This should not be done with map frequency because it's harder to do in that case how many times you will move window and keep track
+//will be hard hence using index is right way to remove old index.
 //this question is unique because we ned to store the alst inex as we want the non reopating chaaracter so we will moce foarawrd also we want to make
 //sure to update start it should be max(start,lastindex) because lastindex could go bakward if last occourence of element was at backward. this way
 //window is alway unique this is important qusiton and also we will calculate the maxlength either it's added or not added with hashmap
