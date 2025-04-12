@@ -1,0 +1,26 @@
+//same as the problem subarrray of min length less then sum use shrink window concept but we need to make sure we are calculating the number of subarray
+// that is i-start+1
+class Solution {
+    public int numSubarrayProductLessThanK(int[] nums, int k) {
+        int ans=1;
+        int start=0;
+        int total=0;
+        if (k <= 1) return 0;
+        for(int i=0;i<nums.length;i++)
+        {
+            ans=ans*nums[i];
+            
+                while(ans>=k && start<=nums.length-1)
+                {
+                    ans/=nums[start];
+                    start+=1;
+                }
+            if(ans<k)
+            total=total+i-start+1;
+
+        }
+        if(total<0)
+        return 0;
+        return total;
+    }
+}
