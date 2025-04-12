@@ -1,0 +1,72 @@
+Absolutely! 🔥 Your reverse-style logic (tracking something from the **right**, and using it when you see a specific element) is **super powerful** in certain types of problems — especially when you're:
+
+> ⚡ Counting how many things **come after** a particular character or number  
+> ⚡ Matching pairs or subsequences like "A before G", "buy before sell", etc.
+
+---
+
+### 🧠 Your Pattern: "Right-to-left suffix-style logic"
+
+You can use this when:
+- You're counting **how many items on the right** match a condition
+- You're matching **pairs/triples** where order matters (e.g. 'A' before 'G')
+
+---
+
+### 🔥 Problems where this approach works beautifully:
+
+| # | Problem | Why reverse logic fits |
+|--|---------|--------------------------|
+| 1 | **Count AG pairs** | ✅ Exactly what you did — track 'G's from right, add on 'A' |
+| 2 | **Count pairs (i, j) such that A[i] < A[j] and i < j** | Go right to left, track frequencies |
+| 3 | **Count number of substrings that start with a vowel and end with a consonant** | Track suffix consonants |
+| 4 | **Count of smaller elements after self** | Reverse + BST / Fenwick Tree |
+| 5 | **Trapping Rain Water** | Right max needed — reverse logic helps |
+| 6 | **Longest valid parentheses** | Right-to-left + left-to-right pass logic |
+| 7 | **Stock Buy & Sell II (Max Profit)** | Track max from the right to sell high |
+| 8 | **Number of ways to form pattern “ABC” in string** | Track 'C' from right, then 'B', then 'A' (multi-level suffix counting) |
+| 9 | **Find leaders in an array** | An element is a leader if greater than all elements to its right |
+| 10 | **Maximum product of two elements such that first is before second** | Track right max while going backward |
+
+---
+
+### 💡 Example: “Leaders in an array”
+> Find all elements that are greater than all elements to their right
+
+```java
+List<Integer> leaders = new ArrayList<>();
+int maxFromRight = Integer.MIN_VALUE;
+for (int i = A.length - 1; i >= 0; i--) {
+    if (A[i] > maxFromRight) {
+        leaders.add(A[i]);
+        maxFromRight = A[i];
+    }
+}
+```
+
+Looks like your `recent` variable, right? Same vibe 👀
+
+---
+
+### 🎯 Mini Challenge Set (to practice this pattern):
+
+| Problem | Platform |
+|--------|----------|
+| Count AG Pairs | InterviewBit / Custom |
+| Count of Smaller Numbers After Self | Leetcode 315 |
+| Trapping Rain Water | Leetcode 42 |
+| Leaders in an Array | GeeksForGeeks |
+| Max Profit in Stock | Leetcode 122 |
+| Number of “ABC” Subsequences | GeeksForGeeks |
+| Number of Subsequences Matching Pattern (like A before B before C) | Custom |
+| Count Vowel-Consonant Pairs | Custom |
+| Longest Substring with Balanced Parentheses | Leetcode 32 |
+| Sum of Minimums of All Subarrays (Monotonic Stack, but reverse can help) | Leetcode 907 |
+
+---
+
+Would you like me to:
+- ✅ Make a LeetCode/Google Sheet list of these?
+- ✅ Explain one or two of them using the reverse trick you’re comfortable with?
+
+Let me know how you want to practice this pattern 🔥
