@@ -1,0 +1,22 @@
+/*it's a 10 side window we need to make so inst4ead of doing +1 we can do substring of 10 size and add it to the map*/
+class Solution {
+    public List<String> findRepeatedDnaSequences(String s) {
+        Map<String,Integer> m=new HashMap<String,Integer>();
+        List<String> answer=new ArrayList<String>();
+        String startstring="";
+        for(int i=0;i<=s.length()-10;i++)
+        {
+            String sub=s.substring(i, i + 10);
+            m.put(sub,m.getOrDefault(sub,0)+1);
+            
+        }
+        for(Map.Entry<String,Integer> m2:m.entrySet())
+        {
+            if(m2.getValue()>1)
+            {
+                answer.add(m2.getKey());
+            }
+        }
+        return answer;
+    }
+}
