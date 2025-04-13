@@ -1,0 +1,33 @@
+Yes — **1 to 2 weeks** is a great timeline to **master Sliding Window**, especially if you:
+
+---
+
+### 🔥 Follow a Focused Plan Like This:
+
+| Day | Pattern Type | What to Do |
+|-----|--------------|------------|
+| **Day 1-2** | ✅ **Fixed Size** | Eg: Max sum in k window, Max avg subarray, Max 1s in a binary array |
+| **Day 3-4** | ✅ **Variable Size - Length Based** | Eg: Longest Substring Without Repeating Characters |
+| **Day 5-6** | ✅ **Variable Size - Count/Frequency Based** | Eg: At most K distinct, Exactly K, Anagram, Min Window Substring |
+| **Day 7** | ✅ **Streak-Based Counting** | Eg: Arithmetic Slices, Subarray with bounded max |
+| **Day 8-9** | ✅ **Deque Based (Monotonic)** | Eg: Sliding Window Max, Shortest subarray with sum at least K |
+| **Day 10-12** | 🧠 **Mix & Match + Revisions** | Revisit old ones + try new unseen ones (esp. advanced) |
+| **Day 13-14** | 📝 **Mock + Timed Practice** | Mix 5-6 problems together in a session like interview prep |
+
+---
+
+### 🎯 Tips to Master Faster:
+
+- Don’t just solve — **label** the pattern (you’ll recall better)
+- Make **mistake notes** — track what logic you missed
+- Ask: “What condition should the window maintain?”
+- Write code **twice**: once to learn, once from memory
+- Use **Google Sheet** to track your progress
+
+---
+
+Would you like:
+- A curated list with ~20 problems organized in this exact plan? (with pattern + link)
+- A Google Sheet template to track it?
+
+Let me know — we’ll lock this down 💪
