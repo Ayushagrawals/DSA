@@ -1,4 +1,5 @@
 //Best Time to Buy and Sell Stock II
+//Here we need to find out the totoal buy sell that we can do so firs t we buy and sell and sell is to higher so we are checking by prices[i]>prices[i-1] and then computing
 class Solution {
     public int maxProfit(int[] prices) {
         int answer=0;
