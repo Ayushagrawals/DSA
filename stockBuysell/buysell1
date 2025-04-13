@@ -1,0 +1,15 @@
+//121. Best Time to Buy and Sell Stock
+//here i am again and again trying the same problem of finding max from right and finding min from the left but that will not wrk bercause array is not sorted so what we will do here is we will
+//keep track of the minimum and calculate the max by sibracing the max=min and will get the vaules.
+class Solution {
+    public int maxProfit(int[] prices) {
+        int minprice=prices[0];
+        int maxvault=0;
+        for(int i=1;i<prices.length;i++)
+        {
+            maxvault=Math.max(maxvault,prices[i]-minprice);
+            minprice=Math.min(minprice,prices[i]);
+        }
+        return maxvault;
+    }
+}
