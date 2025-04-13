@@ -1,0 +1,22 @@
+//"Find max/min/sum/average of subarray of size k"	
+//this is a fixed size sliding window here we should think that this should be odne in one loop because if creating first window then it would fail
+//in those test case where k>length hence to remove we can do is if(i-k) then delte it
+class Solution {
+    public boolean containsNearbyDuplicate(int[] nums, int k) {
+        Map<Integer,Integer> m=new HashMap<Integer,Integer>();
+        
+        for(int i=0;i<nums.length;i++)
+        {
+            if(m.containsKey(nums[i]))
+            {
+                return true;
+            }
+            else{
+                m.put(nums[i],1);
+            }
+            if(i>=k)
+            m.remove(nums[i-k]);
+        }
+        return false;
+    }
+}
