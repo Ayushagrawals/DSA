@@ -6,7 +6,9 @@ Given an integer array nums, return the number of arithmetic subarrays of nums.
 
 A subarray is a contiguous subsequence of the array.*/
 
-
+//Here we are claculating no of window with same difference it can be three or 4 or more so to do this we should know that these are in pattern
+//like  if window is 3 we increment count by 1 and now after increment there are three window 1,2,3 2,3,4 and 1,2,3,4 so this will make sure that
+// you do total is already 1 so it will increment curr and do total is curr becomes 2 and total=3(if we try to do manually it won't work)
 class Solution {
     public int numberOfArithmeticSlices(int[] nums) {
         int count=0;
