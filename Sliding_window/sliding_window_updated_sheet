@@ -1,0 +1,97 @@
+Awesome! Here's your curated **Sliding Window Mastery Sheet** — broken down by pattern, with example LeetCode questions and increasing difficulty.
+
+---
+
+### 🧠 **Core Patterns (Master These First)**
+
+#### 1. ✅ **Fixed-Size Sliding Window**
+*Use when you know the window size (`k`) ahead of time.*
+
+| Problem | Description | LeetCode |
+|--------|-------------|----------|
+| Maximum Sum of Subarray of Size K | Basic pattern | [#643](https://leetcode.com/problems/maximum-average-subarray-i/) |
+| Max Consecutive Ones III | Flip at most K zeroes | [#1004](https://leetcode.com/problems/max-consecutive-ones-iii/) |
+| Maximum Points You Can Obtain from Cards | Pick from start or end, window size `k` | [#1423](https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards/) |
+
+---
+
+#### 2. ✅ **Variable-Size Window - Length/Count Based**
+*Use when window size isn't fixed. Focus on valid window criteria.*
+
+| Problem | Description | LeetCode |
+|--------|-------------|----------|
+| Longest Substring Without Repeating Characters | Classic hashmap window | [#3](https://leetcode.com/problems/longest-substring-without-repeating-characters/) |
+| Longest Substring with At Most K Distinct Characters | Count map + at-most shrink | [#340](https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters/) |
+| Fruit Into Baskets | At most 2 types (K = 2) | [#904](https://leetcode.com/problems/fruit-into-baskets/) |
+
+---
+
+#### 3. ✅ **Variable-Size - Frequency Map or Counter**
+*When you need to track frequency inside window (e.g. substrings, anagrams).*
+
+| Problem | Description | LeetCode |
+|--------|-------------|----------|
+| Permutation in String | Check if s2 has a permutation of s1 | [#567](https://leetcode.com/problems/permutation-in-string/) |
+| Find All Anagrams in a String | Sliding + frequency map | [#438](https://leetcode.com/problems/find-all-anagrams-in-a-string/) |
+| Minimum Window Substring | Hard version with full coverage of characters | [#76](https://leetcode.com/problems/minimum-window-substring/) |
+
+---
+
+#### 4. ✅ **"At Most K" → Counting Problems**
+*Use 2-pointer + subtraction trick to count exact matches.*
+
+| Problem | Description | LeetCode |
+|--------|-------------|----------|
+| Subarrays with K Different Integers | Count exactly K = atMost(K) - atMost(K-1) | [#992](https://leetcode.com/problems/subarrays-with-k-different-integers/) |
+| Number of Substrings Containing All Three Characters | Valid when all 3 present | [#1358](https://leetcode.com/problems/number-of-substrings-containing-all-three-characters/) |
+| Count Number of Nice Subarrays | Exactly K odd numbers | [#1248](https://leetcode.com/problems/count-number-of-nice-subarrays/) |
+
+---
+
+#### 5. ✅ **Streak-Based Sliding Window (Subarray Counting)**
+*Use when you count number of valid subarrays ending at each index.*
+
+| Problem | Description | LeetCode |
+|--------|-------------|----------|
+| Number of Subarrays with Bounded Maximum | Valid if max in range [L, R] | [#795](https://leetcode.com/problems/number-of-subarrays-with-bounded-maximum/) |
+| Arithmetic Slices | Count contiguous sequences | [#413](https://leetcode.com/problems/arithmetic-slices/) |
+| Binary Subarrays With Sum | Count of subarrays with sum = K | [#930](https://leetcode.com/problems/binary-subarrays-with-sum/) |
+
+---
+
+#### 6. ✅ **Deque / Monotonic Sliding Window**
+*Used when you need to track max/min within window.*
+
+| Problem | Description | LeetCode |
+|--------|-------------|----------|
+| Sliding Window Maximum | Track max in window | [#239](https://leetcode.com/problems/sliding-window-maximum/) |
+| Shortest Subarray with Sum At Least K | Prefix + deque | [#862](https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/) |
+
+---
+
+### 💡 Bonus Categories
+
+#### ➤ **Prefix Sum + Sliding Window**
+| Problem | Description | LeetCode |
+|--------|-------------|----------|
+| Subarray Sum Equals K | Prefix + hashmap | [#560](https://leetcode.com/problems/subarray-sum-equals-k/) |
+| Maximum Size Subarray Sum Equals K | Max length with sum K | [#325](https://leetcode.com/problems/maximum-size-subarray-sum-equals-k/) |
+
+#### ➤ **Edge/Tricky Patterns**
+| Problem | Description | LeetCode |
+|--------|-------------|----------|
+| Minimum Operations to Reduce X to Zero | Think from both ends → total - subarray sum | [#1658](https://leetcode.com/problems/minimum-operations-to-reduce-x-to-zero/) |
+| Max Consecutive Ones II | Flip at most 1 zero (sliding count of zero) | [#487](https://leetcode.com/problems/max-consecutive-ones-ii/) |
+
+---
+
+### ✅ Suggestion for You:
+
+You’re **very close to mastery**. I’d recommend:
+
+- Spend 2–3 days per pattern
+- For each one, solve 3–5 problems
+- Track your logic (why shrink? why move left?) in notes
+- I can give you a Google Sheet template to track ✔️
+
+Want me to prepare the sheet?
