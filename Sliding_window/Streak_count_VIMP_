@@ -1,0 +1,96 @@
+//Q - 413
+/*An integer array is called arithmetic if it consists of at least three elements and if the difference between any two consecutive elements is the same.
+
+For example, [1,3,5,7,9], [7,7,7,7], and [3,-1,-5,-9] are arithmetic sequences.
+Given an integer array nums, return the number of arithmetic subarrays of nums.
+
+A subarray is a contiguous subsequence of the array.*/
+
+
+class Solution {
+    public int numberOfArithmeticSlices(int[] nums) {
+        int count=0;
+        int curra=0;
+        for(int i=2;i<nums.length;i++)
+        {
+            if(nums[i] - nums[i - 1] == nums[i - 1] - nums[i - 2])
+            {
+                   curr+=1;
+                   count+=curr;
+            }
+            else{
+                curr=0;
+            }
+        }
+            
+        return count;
+    }
+}
+
+
+
+/*Perfect! Let’s dive into where else you can apply this **"curr + total" pattern** — it's 🔥 for interview questions involving **subarrays or substrings** with **streaks or patterns**.
+
+---
+
+### ✅ 1. **Arithmetic Slices** (you just did this!)
+📌 Pattern: `nums[i] - nums[i-1] == nums[i-1] - nums[i-2]`  
+You extend previous arithmetic sequences by 1, then accumulate.
+
+---
+
+### ✅ 2. **Subarrays with equal elements**  
+🔢 Example: `[1,1,1,2,2]`  
+You can count subarrays of equal numbers like this:
+
+```java
+int count = 0, curr = 1;
+for (int i = 1; i < nums.length; i++) {
+    if (nums[i] == nums[i-1]) {
+        curr++;
+    } else {
+        curr = 1;
+    }
+    count += curr;
+}
+```
+
+This counts all subarrays where elements are the same — good for problems like **"count substrings with same character"**.
+
+---
+
+### ✅ 3. **Count Binary Substrings** (Leetcode 696)
+🧩 Pattern: `00110011`  
+We count contiguous blocks of 0s and 1s and use `Math.min(prevRunLength, currRunLength)` to count valid substrings.
+
+This is slightly different but the **idea of counting streaks** is the same.
+
+---
+
+### ✅ 4. **Longest Substring with Repeating Characters (without replacement)**  
+This one doesn’t use total += curr directly, but the **sliding window with streak extension** idea is applied.
+
+---
+
+### ✅ 5. **Count substrings with at least k repeating characters**
+If the pattern keeps repeating, you keep counting how many substrings satisfy the condition as you extend the current streak.
+
+---
+
+### 🔁 Summary Pattern
+Whenever you:
+- Detect a streak, pattern, or repetition
+- And each step forward **extends** that streak or slice
+- You can often apply this:
+
+```java
+if (pattern continues)
+    curr += 1;
+else
+    curr = 0;
+total += curr;
+```
+
+---
+
+Would you like to practice more problems like this? I can give you a curated set (easy → hard) that use this exact trick 💪*/
