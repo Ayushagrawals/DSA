@@ -1,0 +1,48 @@
+# 🔁 Carry Forward Pattern – Array Based (Easy to Medium)
+
+Carry Forward = Reuse of state or value as you iterate — avoids recomputation.  
+Most often used with Sliding Window, Prefix Sum, HashMaps, Greedy, or DP.
+
+---
+
+## ✅ Easy Problems
+
+| # | Problem | Pattern | What is Carried Forward? |
+|---|---------|---------|---------------------------|
+| 1 | [Find Pivot Index](https://leetcode.com/problems/find-pivot-index/) | Prefix Sum | LeftSum and RightSum using total sum |
+| 2 | [Running Sum of 1d Array](https://leetcode.com/problems/running-sum-of-1d-array/) | Prefix Sum | Cumulative sum |
+| 3 | [Maximum Score After Splitting a String](https://leetcode.com/problems/maximum-score-after-splitting-a-string/) | Greedy | Running count of 0s and 1s |
+| 4 | [Number of Good Pairs](https://leetcode.com/problems/number-of-good-pairs/) | HashMap | Count of elements seen so far |
+| 5 | [Richest Customer Wealth](https://leetcode.com/problems/richest-customer-wealth/) | Carry Forward Max | Max sum row-wise |
+
+---
+
+## ✅ Medium Problems
+
+| # | Problem | Pattern | What is Carried Forward? |
+|---|---------|---------|---------------------------|
+| 6 | [Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/) | Prefix Sum + HashMap | Prefix sum and count in map |
+| 7 | [Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/) | Sliding Window | Current sum and window length |
+| 8 | [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | HashMap + Sliding Window | Last seen index |
+| 9 | [Count Number of Nice Subarrays](https://leetcode.com/problems/count-number-of-nice-subarrays/) | Prefix Sum + HashMap | Count of odd elements |
+| 10 | [Max Consecutive Ones III](https://leetcode.com/problems/max-consecutive-ones-iii/) | Sliding Window + Count | Count of 0s used in window |
+| 11 | [Ways to Make a Fair Array](https://leetcode.com/problems/ways-to-make-a-fair-array/) | Prefix Sum (Even/Odd Trick) | Carry forward even/odd indexed sums |
+| 12 | [Maximum Length of Subarray With Positive Product](https://leetcode.com/problems/maximum-length-of-subarray-with-positive-product/) | Carry Forward | Negatives, zeros, last index |
+| 13 | [Maximum Erasure Value](https://leetcode.com/problems/maximum-erasure-value/) | Sliding Window + HashSet | Running sum of unique elements |
+| 14 | [Longest Subarray of 1’s After Deleting One Element](https://leetcode.com/problems/longest-subarray-of-1s-after-deleting-one-element/) | Sliding Window | Previous zero window |
+| 15 | [Binary Subarray With Sum](https://leetcode.com/problems/binary-subarray-with-sum/) | Prefix Sum + HashMap | Number of subarrays with target sum |
+
+---
+
+## 🧠 Tips to Identify Carry Forward:
+- Repeated computation? → Use carry forward
+- Fixed/variable subarrays? → Likely needs prefix sum or sliding window
+- "Longest/Shortest/Count" in subarray questions? → Carry forward likely needed
+
+---
+
+## 🔄 Next Step
+- Add tags: `carry_forward`, `prefix_sum`, `sliding_window`
+- Add a ✅ column to track solved status
+- Add mistakes/insights column for revision
+
