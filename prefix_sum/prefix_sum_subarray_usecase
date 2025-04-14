@@ -1,0 +1,102 @@
+Awesome! Here's a clear breakdown of **when to use each technique** — **Prefix Sum + HashMap**, **Index Map**, or **Sliding Window**, especially in **subarray problems**.
+
+---
+
+## **1. Prefix Sum + HashMap**
+### Use When:
+- You need to **count** how many subarrays meet a condition (like sum = k).
+- The array can contain **negative numbers** (sliding window won’t work).
+- You want to **track frequency** of past prefix sums.
+
+### Example Problems:
+- **LC 560 – Subarray Sum Equals K**
+- **LC 1248 – Count Number of Nice Subarrays**
+- **LC 930 – Binary Subarrays With Sum**
+- **LC 974 – Subarrays Divisible by K**
+
+### Pattern:
+```java
+Map<Integer, Integer> map = new HashMap<>();
+map.put(0, 1); // Base case
+
+for (int i = 0; i < n; i++) {
+    currSum += arr[i];
+    if (map.containsKey(currSum - k)) {
+        count += map.get(currSum - k);
+    }
+    map.put(currSum, map.getOrDefault(currSum, 0) + 1);
+}
+```
+
+---
+
+## **2. Prefix Sum + Index Map**
+### Use When:
+- You need to **find the length of the longest subarray** (or first/last occurrence).
+- You don’t care about count, just **indices**.
+- You care about **where** the subarray starts/ends.
+
+### Example Problems:
+- **LC 325 – Maximum Size Subarray Sum Equals K**
+- **LC 523 – Continuous Subarray Sum** (with mod)
+
+### Pattern:
+```java
+Map<Integer, Integer> firstSeen = new HashMap<>();
+firstSeen.put(0, -1); // Base case
+
+for (int i = 0; i < n; i++) {
+    currSum += arr[i];
+    if (firstSeen.containsKey(currSum - k)) {
+        maxLen = Math.max(maxLen, i - firstSeen.get(currSum - k));
+    }
+    // Store first occurrence only
+    firstSeen.putIfAbsent(currSum, i);
+}
+```
+
+---
+
+## **3. Sliding Window (with or without HashMap)**
+### Use When:
+- Array has only **positive numbers**.
+- You’re asked for:
+  - **Longest/Shortest subarray** with sum = k
+  - **At most / Exactly K distinct elements**
+- You care about **contiguous windows** expanding/shrinking.
+
+### Example Problems:
+- **LC 209 – Minimum Size Subarray Sum**
+- **LC 3 – Longest Substring Without Repeating Characters**
+- **LC 992 – Subarrays with K Different Integers**
+
+### Pattern:
+```java
+int start = 0;
+for (int end = 0; end < n; end++) {
+    // expand the window
+
+    while (conditionNotMet) {
+        // shrink from the left
+        start++;
+    }
+
+    // update answer here if condition met
+}
+```
+
+---
+
+## Summary Table:
+
+| Goal / Condition | Use This |
+|------------------|-----------|
+| Count subarrays with sum = k | **Prefix Sum + HashMap** |
+| Longest subarray with sum = k | **Prefix Sum + Index Map** |
+| Subarrays with at most/exactly k distinct elements | **Sliding Window + HashMap** |
+| Array contains negatives | **Prefix Sum** |
+| Fast window-based growth/shrink | **Sliding Window** |
+
+---
+
+Let me know if you want a visual diagram or examples for each category in a Google Sheet or GitHub format!
