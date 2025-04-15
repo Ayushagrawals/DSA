@@ -1,0 +1,51 @@
+//smallest subarray containng both min and max
+//we will find min and max
+//we will initliaze lastmin and lasmax=-1 and then find if current element is min or max if its then we will sbutract last min or max based on current
+//if current is min then we subtract last max and take min and it we only do if it's not -1 
+//this is cary forward because we are taking lastminindex and lastmaxindex
+
+public class Solution {
+    
+    public int solve(int[] A) {
+        int maxx=Integer.MIN_VALUE;
+    int minn=Integer.MAX_VALUE;
+    int lastmaxindex=-1;
+    int minans=A.length;
+    int maxans=A.length;
+    int lastminindex=-1;
+    int ans=Integer.MAX_VALUE;
+        for(int i=0;i<A.length;i++)
+        {
+            
+            
+            maxx=Math.max(maxx,A[i]);
+           
+           minn=Math.min(minn,A[i]);
+            
+        }
+        for(int i=0;i<A.length;i++)
+        {
+            if(A[i]==minn)
+            {
+                lastminindex=i;
+                if(lastmaxindex!=-1)
+                {
+                    minans=Math.min(lastminindex-lastmaxindex+1,minans);
+                }
+
+                
+                
+            }
+            if(A[i]==maxx)
+            {
+                lastmaxindex=i;
+                if(lastminindex!=-1)
+                {
+                    maxans=Math.min(lastmaxindex-lastminindex+1,maxans);
+                }
+            }
+        }
+        return Math.min(minans,maxans);
+        
+    }
+}
