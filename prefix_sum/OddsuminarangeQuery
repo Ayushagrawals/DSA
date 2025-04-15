@@ -1,0 +1,40 @@
+// Sum of Odd indexed elements in a range
+/*Problem Description
+
+You are given:
+An integer array A representing the array of numbers of size N.
+A 2D array B of size Q, where each row B[i] contains two integers B[i][0] and B[i][1], representing the range [L, R].
+
+For each query in B, calculate the sum of elements in A at odd indices within the specified range [L, R] and return the results as an array.*/
+//We will calculate this by doing  prefix odd element index and then we can subtract it in query array iteration if first is zero then second prefix is th anwer 
+public class Solution {
+    public int[] sumOfOddIndexedElements(int[] A, int[][] B) {
+        int[] prefix=new int[A.length];
+        int[] answer=new int[B.length];
+        int curr=0;
+        prefix[0]=0;
+        for(int i=1;i<A.length;i++)
+        {
+            if(i%2!=0)
+            {
+                prefix[i]=prefix[i-1]+A[i];
+            }
+            else{
+                prefix[i]=prefix[i-1];
+            }
+        }
+        for(int i=0;i<B.length;i++)
+        {
+            int first=B[i][0];
+            int second=B[i][1];
+            if(first==0)
+            {
+                answer[i]=prefix[second];
+            }
+            else
+                answer[i]=prefix[second]-prefix[first-1];
+        }
+        return answer;
+    
+    }
+}
