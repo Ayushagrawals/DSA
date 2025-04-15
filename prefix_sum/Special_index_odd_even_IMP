@@ -1,0 +1,62 @@
+//Given an array, arr[] of size N, the task is to find the count of array indices such that removing an element from these indices makes the sum of even-indexed and odd-indexed array elements equal.
+//Here what we should know is as it's sum problem so we are creating even sum and odd sum prefix.
+//aft4er that we are theoritically remove array element for each index so what finding is as remove it so element after ith index become opposite
+//like odd becomes even and even become odd hence what we are doing is calculating even sum and odd sum as per index by calculating even sum before it
+//and calcualting odd sum after it for even and same for odd before ith index calcutaing odd and even after it and comparing every time if they are equal
+//increasing answer count and return it
+public class Solution {
+    public int solve(int[] A) {
+        int[] prefixeven=new int[A.length];
+        int[] prefixodd=new int[A.length];
+        prefixeven[0]=A[0];
+        int evensum=0;
+        int oddsum=0;
+        for(int i=1;i<A.length;i++)
+        {
+            if(i%2==0)
+            {
+                 prefixeven[i]=prefixeven[i-1]+A[i];
+                
+            }
+            else{
+               prefixeven[i]=prefixeven[i-1];
+            }
+        }
+         prefixodd[0]=0;
+        for(int i=1;i<A.length;i++)
+        {
+            if(i%2==0)
+            {
+                prefixodd[i]=prefixodd[i-1];
+            }
+            else{
+                prefixodd[i]=prefixodd[i-1]+A[i];
+            }
+        }
+        int ans=0;
+        for(int i=0;i<A.length;i++)
+        {
+            if(i==0)
+            {
+                evensum=prefixodd[A.length-1];
+                oddsum=prefixeven[A.length-1];
+
+            }
+           /* else if(i%2!=0)
+            {
+                evensum=prefixodd[i-1]+prefixeven[A.length-1]-prefixeven[i];
+                oddsum=prefixeven[i-1]+prefixodd[A.length-1]-prefixodd[i];
+                
+            }*/else{
+                evensum=prefixeven[i-1]+prefixodd[A.length-1]-prefixodd[i];
+                oddsum=prefixodd[i-1]+prefixeven[A.length-1]-prefixeven[i];
+            }
+            if(evensum==oddsum)
+                {
+                    ans+=1;
+                }
+            
+        }
+        return ans;
+    }
+}
