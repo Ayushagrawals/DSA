@@ -1,0 +1,175 @@
+Sure! Here are **10 questions** for each category based on your interest, including **Prefix Sum**, **Carry-Forward Prefix Sum Array**, **Fixed-Size Sliding Window**, and **Variable-Size Sliding Window**.
+
+### **1. Prefix Sum Problems**:
+Prefix Sum is useful for efficiently calculating the sum of elements in any subarray.
+
+1. **Subarray Sum Equals K**  
+   - Find the number of subarrays whose sum is equal to a given value `K`.
+   - Leetcode: [Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/)
+
+2. **Range Sum Query – Immutable**  
+   - Implement the `NumArray` class that accepts an array and allows you to perform sum queries over any range.
+   - Leetcode: [Range Sum Query – Immutable](https://leetcode.com/problems/range-sum-query-immutable/)
+
+3. **Product of Array Except Self**  
+   - Given an array `nums`, return an array where each element is the product of all elements of the original array except itself.
+   - Leetcode: [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/)
+
+4. **Subarray Sum Divisible by K**  
+   - Find the number of subarrays whose sum is divisible by `K`.
+   - Leetcode: [Subarray Sum Divisible by K](https://leetcode.com/problems/subarray-sums-divisible-by-k/)
+
+5. **Maximum Sum of Subarray Size K**  
+   - Given an array, find the maximum sum of subarrays of size `K`.
+   - Leetcode: [Maximum Sum of Subarray Size K](https://leetcode.com/problems/maximum-sum-of-subarray-of-size-k/)
+
+6. **Find the Most Frequent Subarray Sum**  
+   - Given an array of integers, find the most frequent subarray sum.
+   - Leetcode: [Most Frequent Subarray Sum](https://leetcode.com/problems/most-frequent-subarray-sum/)
+
+7. **Prefix Sum Array**  
+   - Given an array, find the sum of all elements from index `i` to `j` using a prefix sum array.
+   - Example problem: Calculate the sum of any given range in constant time after preprocessing the array.
+
+8. **Range Sum Query 2D - Immutable**  
+   - Implement a class that computes the sum of elements in a 2D matrix range.
+   - Leetcode: [Range Sum Query 2D](https://leetcode.com/problems/range-sum-query-2d-immutable/)
+
+9. **Max Sum of K Non-Overlapping Subarrays**  
+   - Given an array and a number `K`, find the maximum sum you can get by selecting `K` non-overlapping subarrays.
+   - Leetcode: [Max Sum of K Non-Overlapping Subarrays](https://leetcode.com/problems/maximum-sum-of-k-non-overlapping-subarrays/)
+
+10. **Minimum Size Subarray Sum**  
+   - Given a target sum `S` and an array `nums`, find the minimal length of a contiguous subarray whose sum is greater than or equal to `S`.
+   - Leetcode: [Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/)
+
+---
+
+### **2. Carry-Forward Prefix Sum Array**:
+These problems involve a prefix sum or cumulative sum that is "carried forward" to calculate sums or other operations on subarrays efficiently.
+
+1. **Find Subarrays with Sum 0**  
+   - Find the number of subarrays whose sum equals 0.
+   - Example: Using prefix sum to find contiguous subarrays with sum zero.
+
+2. **Subarray Sum Equals K with Carry-Forward**  
+   - Given an array, find all subarrays whose sum equals `K` using the prefix sum and carry-forward technique.
+
+3. **Maximum Subarray Sum (Kadane’s Algorithm)**  
+   - Find the maximum sum of any contiguous subarray in the given array.
+   - Leetcode: [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)
+
+4. **Sum of Subarrays of Even Length**  
+   - Find all subarrays of even length and calculate their sum.
+   - Example: Carry forward the sum of subarrays to determine if their length is even.
+
+5. **Subarray Sum Divisible by 3**  
+   - Find subarrays whose sum is divisible by 3 using prefix sum and carry-forward techniques.
+
+6. **Find Largest Subarray with Sum ≤ K**  
+   - Find the largest subarray whose sum is less than or equal to `K` using prefix sum.
+
+7. **Prefix Sum for Range Queries**  
+   - Given a range, calculate the sum of elements between indices using the carry-forward prefix sum technique.
+
+8. **Find Longest Subarray with Given Sum**  
+   - Given an array and a target sum `K`, find the longest subarray that sums to `K`.
+
+9. **Number of Subarrays with Sum >= K**  
+   - Count the number of subarrays whose sum is greater than or equal to `K`.
+
+10. **Find All Subarrays with a Given Sum Using Prefix Sum**  
+   - Find all subarrays whose sum equals a target value by using a prefix sum and a hashmap to store previous sums.
+
+---
+
+### **3. Fixed-Size Sliding Window Problems**:
+These problems involve subarrays with a fixed window size, moving across the array.
+
+1. **Maximum Sum Subarray of Size K**  
+   - Find the maximum sum of a subarray with size `K`.
+   - Leetcode: [Maximum Sum Subarray of Size K](https://leetcode.com/problems/maximum-sum-of-k-size-subarray/)
+
+2. **Minimum Size Subarray Sum**  
+   - Find the minimum length of a subarray whose sum is greater than or equal to `K`.
+   - Leetcode: [Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/)
+
+3. **Sliding Window Maximum**  
+   - Given an array and a window size `K`, find the maximum element in every sliding window.
+   - Leetcode: [Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/)
+
+4. **Average of Subarrays of Size K**  
+   - Calculate the average of all contiguous subarrays of size `K`.
+   - Example: Calculate the moving average of a stream of integers using a sliding window.
+
+5. **Find Subarray with Maximum Product**  
+   - Given an array of integers, find the contiguous subarray within a given size that has the largest product.
+
+6. **Longest Substring with K Distinct Characters**  
+   - Find the longest substring with at most `K` distinct characters using a sliding window.
+
+7. **Count Number of Subarrays with At Most K Distinct Integers**  
+   - Find the number of subarrays with at most `K` distinct integers using a sliding window.
+
+8. **Max Consecutive Ones**  
+   - Given a binary array, find the maximum number of consecutive `1`s after flipping at most one element.
+   - Leetcode: [Max Consecutive Ones](https://leetcode.com/problems/max-consecutive-ones/)
+
+9. **Minimum Window Substring**  
+   - Given two strings `s` and `t`, find the minimum window in `s` that contains all the characters of `t`.
+   - Leetcode: [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/)
+
+10. **Fruit Into Baskets**  
+   - Given an array representing fruits, find the maximum number of fruits you can collect in two baskets.
+   - Leetcode: [Fruit Into Baskets](https://leetcode.com/problems/fruit-into-baskets/)
+
+---
+
+### **4. Variable-Size Sliding Window Problems**:
+These problems involve sliding windows where the window size can vary dynamically based on a condition.
+
+1. **Longest Substring Without Repeating Characters**  
+   - Given a string, find the length of the longest substring without repeating characters.
+   - Leetcode: [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
+
+2. **Longest Substring with At Most K Distinct Characters**  
+   - Given a string, find the length of the longest substring with at most `K` distinct characters.
+   - Leetcode: [Longest Substring with At Most K Distinct Characters](https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters/)
+
+3. **Subarrays with K Different Integers**  
+   - Find the number of subarrays with exactly `K` different integers.
+   - Leetcode: [Subarrays with K Different Integers](https://leetcode.com/problems/subarrays-with-k-different-integers/)
+
+4. **Longest Subarray with Sum at Most K**  
+   - Given an array and a target sum `K`, find the length of the longest subarray with a sum less than or equal to `K`.
+   - Leetcode: [Longest Subarray with Sum at Most K](https://leetcode.com/problems/longest-subarray-with-sum-at-most-k/)
+
+5. **Minimum Window Subsequence**  
+   - Given two strings `s` and `t`, find the minimum window in `s` that contains all characters of `t`.
+   - Leetcode: [Minimum Window Subsequence](https://leetcode.com/problems/minimum-window-subsequence/)
+
+6. **Find All Anagrams in a String**  
+   - Find all the start indices of `p`'s anagrams in `s`.
+   - Leetcode: [Find All Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string/)
+
+7. **Longest Subarray with Ones After Replacement**  
+   - Given a binary array, find the length of the longest contiguous subarray that can be
+
+ obtained after at most `k` flips of 0 to 1.
+   - Leetcode: [Longest Subarray with Ones After Replacement](https://leetcode.com/problems/longest-subarray-with-ones-after-replacement/)
+
+8. **Sliding Window for Maximum/Minimum Value**  
+   - Given a window size `K`, find the maximum or minimum element in the current window as it slides across the array.
+   - Leetcode: [Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/)
+
+9. **Substring with Concatenation of All Words**  
+   - Given a string and a list of words, find all starting indices of the substring(s) in `s` which is a concatenation of all the words in `words`.
+   - Leetcode: [Substring with Concatenation of All Words](https://leetcode.com/problems/substring-with-concatenation-of-all-words/)
+
+10. **Max Points You Can Obtain from Cards**  
+   - Given an array of integers `cards` and a number `k`, calculate the maximum points you can obtain from the first or last `k` cards.
+   - Leetcode: [Max Points You Can Obtain from Cards](https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards/)
+
+---
+
+These questions will give you a comprehensive understanding of **Prefix Sum**, **Carry-Forward Prefix Sum Array**, **Fixed-Size Sliding Window**, and **Variable-Size Sliding Window** problems!
