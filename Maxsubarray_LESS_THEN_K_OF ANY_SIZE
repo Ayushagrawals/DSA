@@ -1,0 +1,27 @@
+//You are given an integer array C of size A. Now you need to find a subarray (contiguous elements) so that the sum of contiguous elements is maximum.
+//But the sum must not exceed B.
+//we will shrink the window if the sum got larger
+public class Solution {
+    public int maxSubarray(int A, int B, int[] C) {
+        int sum=0;
+        int start=0;
+        int count=0;
+        int maxsum=Integer.MIN_VALUE;
+        for(int i=0;i<A;i++)
+        {
+            sum+=C[i];
+            
+            while(sum>B)
+            {
+                sum-=C[start];
+                if(sum<=B)
+                {
+                    maxsum=Math.max(maxsum,sum);
+                }
+                start+=1;
+            }
+            maxsum=Math.max(maxsum,sum);
+        }
+        return maxsum;
+    }
+}
