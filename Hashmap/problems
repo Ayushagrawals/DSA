@@ -1,0 +1,57 @@
+Absolutely — since **HashMap**-based patterns are one of the **top priorities for Walmart interviews**, here's a curated list of **20 must-practice HashMap pattern problems** grouped by their pattern type and increasing complexity.
+
+---
+
+### ✅ **Categories of HashMap Patterns**
+
+We'll break them down into 5 key patterns:
+
+1. 🔁 **Frequency Count & Grouping**
+2. 🪟 **HashMap + Sliding Window**
+3. ➕ **Prefix Sum with HashMap**
+4. 🔁 **Last Seen Index / Index Mapping**
+5. 🧠 **Custom Key Hashing / Map Design**
+
+---
+
+### 🔥 **Top 20 HashMap Pattern Problems**
+
+| #  | Problem Name | Pattern Type | Difficulty | Link |
+|----|--------------|--------------|------------|------|
+| 1  | [Two Sum](https://leetcode.com/problems/two-sum/) | Prefix Sum / HashMap | Easy | ✅ Must-do |
+| 2  | [Group Anagrams](https://leetcode.com/problems/group-anagrams/) | Grouping via custom key | Medium | ✅ Must-do |
+| 3  | [Valid Anagram](https://leetcode.com/problems/valid-anagram/) | Frequency Count | Easy | |
+| 4  | [Subdomain Visit Count](https://leetcode.com/problems/subdomain-visit-count/) | Frequency Count | Easy | ✅ From your list |
+| 5  | [Degree of an Array](https://leetcode.com/problems/degree-of-an-array/) | Frequency + Index Tracking | Easy | ✅ From your list |
+| 6  | [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | HashMap + Sliding Window | Medium | ✅ Must-do |
+| 7  | [Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/) | HashMap + Sliding Window | Medium | |
+| 8  | [Fruits Into Baskets](https://leetcode.com/problems/fruit-into-baskets/) | HashMap + Sliding Window (at most k) | Medium | |
+| 9  | [Subarrays with K Different Integers](https://leetcode.com/problems/subarrays-with-k-different-integers/) | HashMap + Window (Exactly K via 2 AtMost) | Hard | ✅ For Walmart |
+| 10 | [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/) | HashMap + Sliding Window | Hard | ✅ For interviews |
+| 11 | [Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/) | Prefix Sum + HashMap | Medium | ✅ Must-do |
+| 12 | [Continuous Subarray Sum](https://leetcode.com/problems/continuous-subarray-sum/) | Prefix Mod + HashMap | Medium | ✅ From your list |
+| 13 | [Count Number of Nice Subarrays](https://leetcode.com/problems/count-number-of-nice-subarrays/) | Prefix Sum + Odd Count Map | Medium | ✅ Sliding Window Variant |
+| 14 | [Number of Subarrays with Sum = K](https://leetcode.com/problems/subarray-sum-equals-k/) | Prefix Sum + HashMap | Medium | Same as 11 |
+| 15 | [Longest Palindrome by Concatenating Two Letter Words](https://leetcode.com/problems/longest-palindrome-by-concatenating-two-letter-words/) | Frequency Count | Medium | Interesting variation |
+| 16 | [Find All Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string/) | Sliding Window + Frequency Map | Medium | |
+| 17 | [Isomorphic Strings](https://leetcode.com/problems/isomorphic-strings/) | Map Character Mapping | Easy | |
+| 18 | [Word Pattern](https://leetcode.com/problems/word-pattern/) | Character ↔ Word HashMap | Easy | |
+| 19 | [First Unique Character in a String](https://leetcode.com/problems/first-unique-character-in-a-string/) | Frequency Map | Easy | |
+| 20 | [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/) | Frequency Map + Heap | Medium | ✅ Must-do |
+
+---
+
+### 🧭 Recommendations for You
+
+- ✅ **Start with 1, 2, 3, 6, 11, 12** — they’re all Walmart-level and foundational.
+- 🚀 **Level up with 9, 10, 13, 16, 20** for mid-to-hard difficulty challenges using HashMap in combination with other techniques.
+
+---
+
+Would you like a [🧾 Google Sheet Tracker] for these with:
+- ✅ Difficulty
+- 🕒 Time Taken
+- ❌ Mistakes
+- 📆 Revision Schedule?
+
+Or I can also make a GitHub-style markdown list for you. Let me know your format!
