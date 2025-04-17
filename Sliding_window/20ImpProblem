@@ -1,7 +1,7 @@
 Perfect! Here's a curated list of **20 sliding window problems**, categorized by pattern — covering all major variations like **fixed size**, **variable size**, **hashmap-based**, **deque-based**, and **at most/exactly K** questions. All of these are commonly asked in product companies like **Walmart, Amazon, Adobe, Microsoft**, etc.
 
 ---
-
+//Note “Minimum number of swaps / replacements / operations to group/filter certain elements together… means sliding window
 ### 🟩 **1. Classic Fixed-Size Window**
 These use a fixed `k` window and involve **sum, count, or average**.
 
