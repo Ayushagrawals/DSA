@@ -1,0 +1,51 @@
+Perfect — you're diving into one of the most **important and high-frequency patterns** used in interviews, especially in companies like **Walmart, Amazon, Google, and Microsoft**.
+
+---
+
+### 💡 Pattern: **Prefix Sum + HashMap**
+
+> Use a **prefix sum** to track the cumulative sum and a **HashMap** to store either:
+> - the **first index** of each prefix sum modulo (to detect subarrays with certain modular properties),
+> - or the **frequency** of a prefix sum (to count the number of subarrays that match a certain condition).
+
+---
+
+### 🔥 Top 15 Problems (Prefix Sum + HashMap)
+
+| #  | Problem Name                                                                 | Pattern Summary |
+|----|------------------------------------------------------------------------------|------------------|
+| 1  | [Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/) | `Prefix Sum + HashMap (sum-k)` |
+| 2  | [Continuous Subarray Sum](https://leetcode.com/problems/continuous-subarray-sum/) | `Prefix Sum % k + HashMap` |
+| 3  | [Binary Subarrays With Sum](https://leetcode.com/problems/binary-subarrays-with-sum/) | `Prefix Sum + Count Map` |
+| 4  | [Count Number of Nice Subarrays](https://leetcode.com/problems/count-number-of-nice-subarrays/) | `Prefix Sum of Odds + HashMap` |
+| 5  | [Longest Subarray with Sum Divisible by K](https://leetcode.com/problems/longest-subarray-with-sum-divisible-by-k/) | `Prefix Sum % k + Index Map` |
+| 6  | [Subarrays Divisible by K](https://leetcode.com/problems/subarray-sums-divisible-by-k/) | `Prefix Sum % k + Frequency Map` |
+| 7  | [Find Pivot Index](https://leetcode.com/problems/find-pivot-index/) | `Prefix Sum Left vs Total Sum` |
+| 8  | [Find the Longest Substring Containing Equal Number of 0 and 1](https://leetcode.com/problems/contiguous-array/) | `Balance of 1s and 0s → HashMap` |
+| 9  | [Maximum Size Subarray Sum Equals K](https://leetcode.com/problems/maximum-size-subarray-sum-equals-k/) | `Prefix Sum + Index Map` |
+| 10 | [Subarray Sum Equals Zero](https://www.geeksforgeeks.org/find-subarray-with-given-sum/) | `Prefix Sum + Set` (or Map for index) |
+| 11 | [Equal Binary Substrings](https://leetcode.com/problems/count-binary-substrings/) | `Prefix with 0 as -1 trick` |
+| 12 | [Equal Number of Substrings With Even and Odd](custom variation) | `Prefix even/odd count diff → Map` |
+| 13 | [Subarray with 0 Sum](https://www.geeksforgeeks.org/find-if-there-is-a-subarray-with-0-sum/) | `Prefix Sum + HashSet` |
+| 14 | [Longest Span with Same Sum in Two Binary Arrays](https://www.geeksforgeeks.org/longest-span-sum-two-binary-arrays/) | `Diff Array + Prefix Sum + Map` |
+| 15 | [Sum of All Odd Length Subarrays](https://leetcode.com/problems/sum-of-all-odd-length-subarrays/) | `Math + Prefix Sum` |
+
+---
+
+### ✨ Variations of This Pattern
+
+- **Prefix Sum with mod →** Detect patterns involving divisibility (like `% k == 0`)
+- **Prefix Sum with count map →** Count number of subarrays (like count of sum == k)
+- **Prefix Sum with index map →** Find **lengths** of subarrays (like max length)
+
+---
+
+### 📌 Tricks Used in These:
+
+- Convert **0s to -1** → Helps in balance-based problems like Contiguous Array
+- Handle `%` carefully with negatives: `(mod + k) % k`
+- Initialize `map.put(0, -1)` → Helps to catch subarrays starting from index 0
+
+---
+
+If you want, I can create a **daily schedule (7-day)** or **sheet** to master all these variations with problems sorted by type — let me know your style!
