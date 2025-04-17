@@ -1,0 +1,64 @@
+Absolutely! Here's your **Walmart question list**, **categorized by pattern** like HashMap, Sliding Window, Prefix Sum, DP, Greedy, Sorting, Stack, etc.
+
+---
+
+### ✅ **Categorized Walmart Question List**
+
+| # | Problem Name | Link | Category |
+|--|--------------|------|----------|
+| 1 | Remove Colored Pieces if Both Neighbors are the Same Color | [Link](https://leetcode.com/problems/remove-colored-pieces-if-both-neighbors-are-the-same-color/) | Greedy |
+| 2 | Slowest Key | [Link](https://leetcode.com/problems/slowest-key/) | Basic Math / String |
+| 3 | Reformat Date | [Link](https://leetcode.com/problems/reformat-date/) | String Parsing |
+| 4 | Split a String in Balanced Strings | [Link](https://leetcode.com/problems/split-a-string-in-balanced-strings/) | Greedy |
+| 5 | Find Smallest Common Element in All Rows | [Link](https://leetcode.com/problems/find-smallest-common-element-in-all-rows/) | Matrix + HashMap |
+| 6 | Subdomain Visit Count | [Link](https://leetcode.com/problems/subdomain-visit-count/) | HashMap + String |
+| 7 | Design HashMap | [Link](https://leetcode.com/problems/design-hashmap/) | LLD / Hashing |
+| 8 | Degree of an Array | [Link](https://leetcode.com/problems/degree-of-an-array/) | HashMap |
+| 9 | Valid Palindrome II | [Link](https://leetcode.com/problems/valid-palindrome-ii/) | Two Pointers |
+| 10 | Strange Printer | [Link](https://leetcode.com/problems/strange-printer/) | DP (Memoization) |
+| 11 | Continuous Subarray Sum | [Link](https://leetcode.com/problems/continuous-subarray-sum/) | Prefix Sum + HashMap |
+| 12 | LFU Cache | [Link](https://leetcode.com/problems/lfu-cache/) | LLD + Heap + HashMap |
+| 13 | Partition Equal Subset Sum | [Link](https://leetcode.com/problems/partition-equal-subset-sum/) | DP (Subset Sum) |
+| 14 | Decode String | [Link](https://leetcode.com/problems/decode-string/) | Stack |
+| 15 | Find K Pairs with Smallest Sums | [Link](https://leetcode.com/problems/find-k-pairs-with-smallest-sums/) | Heap + Sorting |
+| 16 | Design Twitter | [Link](https://leetcode.com/problems/design-twitter/) | LLD + Heap |
+| 17 | Paint House II | [Link](https://leetcode.com/problems/paint-house-ii/) | DP |
+| 18 | House Robber | [Link](https://leetcode.com/problems/house-robber/) | DP |
+| 19 | LRU Cache | [Link](https://leetcode.com/problems/lru-cache/) | LLD + LinkedHashMap |
+| 20 | Gas Station | [Link](https://leetcode.com/problems/gas-station/) | Greedy |
+| 21 | Best Time to Buy and Sell Stock II | [Link](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/) | Greedy |
+| 22 | Best Time to Buy and Sell Stock | [Link](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | DP / Greedy |
+| 23 | Path Sum | [Link](https://leetcode.com/problems/path-sum/) | DFS |
+| 24 | Merge Intervals | [Link](https://leetcode.com/problems/merge-intervals/) | Sorting + Interval |
+| 25 | Maximum Subarray | [Link](https://leetcode.com/problems/maximum-subarray/) | Kadane’s Algo (Prefix Sum) |
+| 26 | Group Anagrams | [Link](https://leetcode.com/problems/group-anagrams/) | HashMap + Sorting |
+| 27 | First Missing Positive | [Link](https://leetcode.com/problems/first-missing-positive/) | Index Manipulation / Cyclic Sort |
+| 28 | Count and Say | [Link](https://leetcode.com/problems/count-and-say/) | String / Recursion |
+| 29 | Search in Rotated Sorted Array | [Link](https://leetcode.com/problems/search-in-rotated-sorted-array/) | Binary Search |
+| 30 | Merge k Sorted Lists | [Link](https://leetcode.com/problems/merge-k-sorted-lists/) | Heap + LinkedList |
+| 31 | Generate Parentheses | [Link](https://leetcode.com/problems/generate-parentheses/) | Backtracking |
+| 32 | Remove Nth Node From End of List | [Link](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) | Two Pointers |
+| 33 | 3Sum | [Link](https://leetcode.com/problems/3sum/) | Two Pointers + Sorting |
+| 34 | Median of Two Sorted Arrays | [Link](https://leetcode.com/problems/median-of-two-sorted-arrays/) | Binary Search (Advanced) |
+| 35 | Longest Substring Without Repeating Characters | [Link](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | Sliding Window + HashMap |
+| 36 | Two Sum | [Link](https://leetcode.com/problems/two-sum/) | HashMap |
+
+---
+
+### 🔍 Insights: What Walmart Focuses On
+
+- ✅ **HashMap Based** → High frequency: e.g. Two Sum, Group Anagrams, Subdomain Count
+- ✅ **Sliding Window + HashMap** → E.g. Longest Substring Without Repeating Characters
+- ✅ **Greedy & DP** → Stock problems, Partition, Robber, Paint House
+- ✅ **LLD / System Design** → Design Twitter, LRU, LFU, Design HashMap
+- ✅ **Heap + Sorting** → Merge K Lists, K Pairs with Smallest Sums
+- ✅ **String Parsing** → Reformat Date, Decode String
+
+---
+
+Let me know if you want:
+- 📊 A **tracker sheet** with difficulty levels and revisit plan
+- 🧠 A **60-question roadmap** sorted by these patterns
+- 🧩 A quiz-style flashcard format to test concepts
+
+Want me to pull **more questions by pattern** or company tag?
