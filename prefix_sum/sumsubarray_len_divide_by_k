@@ -1,0 +1,54 @@
+//Given an integer array nums and an integer k, return true if nums has a good subarray or false otherwise.
+
+//A good subarray is a subarray where:
+
+//its length is at least two, and
+//the sum of the elements of the subarray is a multiple of k.
+
+
+//Brute force with carry foeward
+class Solution {
+    public boolean checkSubarraySum(int[] nums, int k) {
+        int count=0;
+        int sum=0;
+        for(int i=0;i<nums.length;i++)
+        {
+            sum=0;
+            for(int j=i;j<nums.length;j++)
+            {
+                sum+=nums[j]; //calculate sum 
+                if(j-i+1>=2)//include only with len greater then equal k
+                {
+                    
+                    if(sum%k==0)
+                    {
+                        return true;
+                    }
+                }
+            }
+        }
+        return false;
+    }
+}
+//With hashmap
+class Solution {
+    public boolean checkSubarraySum(int[] nums, int k) {
+        Map<Integer, Integer> map = new HashMap<>();
+        map.put(0, -1); // Handle case where subarray starts at index 0
+        int sum = 0;
+
+        for (int i = 0; i < nums.length; i++) {
+            sum += nums[i];
+            int mod = k == 0 ? sum : sum % k;
+
+            if (map.containsKey(mod)) {
+                if (i - map.get(mod) >= 2) {
+                    return true;
+                }
+            } else {
+                map.put(mod, i);
+            }
+        }
+        return false;
+    }
+}
