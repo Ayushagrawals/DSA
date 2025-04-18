@@ -1,4 +1,7 @@
 //Binary Subarrays With Sum
+
+//Here it's prefix sum with one variable like nice subarray or subarray divisble by k here we have sum variable we are calcuting sum of subarray starting 
+//from the ith position to end with the help of the j variable and checking everytime with the sum
 class Solution {
     public int numSubarraysWithSum(int[] nums, int goal) {
         int sum=0;
