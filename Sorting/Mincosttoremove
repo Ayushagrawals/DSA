@@ -1,0 +1,29 @@
+
+
+/*Given an integer array A of size N. You can remove any element from the array in one operation.
+The cost of this operation is the sum of all elements in the array present before this operation.
+
+Find the minimum cost to remove all elements from the array.*/
+
+//here we want to remove the element such that we remove with the min cost so we should do it in the descending order way so greater element will removed first. And the cost is calculate by summing
+//the numbers so we created sum variable now we want to sum it such that element removed not included after removal so we took answer variable made it same as sum now adding it with each iteration
+//with sum-arr[i] and save it to sum after that ans+=val; with this we are able to create it ans
+public class Solution {
+    public int solve(int[] A) {
+        Arrays.sort(A);
+        int sum=0;
+        for(int i=0;i<A.length;i++)
+        {
+            sum+=A[i];
+        }
+        int ans=sum;
+        for(int i=A.length-1;i>=0;i--)
+        {
+            int val=sum-A[i];
+            ans+=val;
+            sum=val;
+        }
+        return ans;
+
+    }
+}
