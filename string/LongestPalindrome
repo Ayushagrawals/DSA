@@ -1,0 +1,45 @@
+//Here we are calcuating the palindrome of longest substring so there are two things either it can be of even or odd if it's odd then there is one mid otherwise even there can be two mid so 
+//differences is on the initialize part 
+
+public class Solution {
+    public String longestPalindrome(String A) {
+        String s1="";
+        String s2="";
+        for(int i=0;i<A.length();i++)
+        {
+            //checkodd
+            int left=i;
+            int right=i;
+            
+            while(left>=0 && right<A.length() && A.charAt(left)==A.charAt(right))
+            {
+                left--;
+                right++;
+                //oddcount=Math.max(oddcount,right-left-1);
+                
+            }
+            if (right - left - 1 > s1.length()) {
+                s1 = A.substring(left + 1, right); 
+            }
+            left=i;
+            right=i+1;
+            while(left>=0 && right<A.length() && A.charAt(left)==A.charAt(right))
+            {
+                left--;
+                right++;
+                
+            }
+            if (right - left - 1 > s2.length()) {
+                s2 = A.substring(left + 1, right);
+            }
+        }
+        if(s1.length()>s2.length())
+        {
+            return s1;
+        }
+        else{
+            return s2;
+        }
+        
+    }
+}
