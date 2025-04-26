@@ -1,1 +1,3 @@
 //It is used where we can define the ordering like the directed graph for the cyclical graph and the undirected graph it will not work.
+//so if we start from different point the answer will be different and we have to choose accordingly(In the lecture started from the 1)
+// We are using the stack to load the elements the once which are visisting and the also the array to mark if it's already visited or not visited.
