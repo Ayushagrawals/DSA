@@ -1,1 +1,2 @@
-
+//Here we will use dfs because we are exploring each path and easy to visualize in 8 direction knight will move. And we will check for the prev+1 if it's then we can continue and also for every
+//iteration we will check for boundary so totoal 8 recursion will be called
