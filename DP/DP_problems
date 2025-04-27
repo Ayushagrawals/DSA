@@ -1,0 +1,100 @@
+Sure! Here’s a list of dynamic programming and recursion problems arranged from **easy** to **medium** difficulty. This will help you gradually build up your skills and tackle problems with increasing complexity.
+
+### **Easy to Medium Dynamic Programming / Recursion Problems**
+
+#### **Easy Level**
+
+1. **Fibonacci Number**
+   - **Problem:** Compute the nth Fibonacci number.
+   - **Approach:** Recursion with memoization or dynamic programming.
+
+2. **Climbing Stairs**
+   - **Problem:** You can climb either 1 or 2 steps at a time. Find the number of ways to reach the top.
+   - **Approach:** Recursion with DP (bottom-up or top-down).
+
+3. **Min Cost Climbing Stairs**
+   - **Problem:** Given an array of costs, find the minimum cost to reach the top by climbing stairs. You can climb 1 or 2 steps.
+   - **Approach:** Dynamic Programming (bottom-up).
+
+4. **House Robber**
+   - **Problem:** You cannot rob two adjacent houses. Find the maximum amount you can rob.
+   - **Approach:** Dynamic programming with a recurrence relation.
+
+5. **Unique Paths**
+   - **Problem:** Find the number of unique paths from the top-left to the bottom-right corner in a grid, only moving down or right.
+   - **Approach:** Dynamic programming (bottom-up), grid-based DP.
+
+6. **Coin Change (Minimum Coins)**
+   - **Problem:** Given a set of coin denominations, find the minimum number of coins needed to make up a given amount.
+   - **Approach:** Dynamic programming, coin change problem.
+
+7. **Target Sum**
+   - **Problem:** Given a set of numbers and a target, find if there’s a subset whose sum equals the target.
+   - **Approach:** Subset sum DP.
+
+8. **Subsets (Power Set)**
+   - **Problem:** Find all subsets of a given set of integers.
+   - **Approach:** Recursion or dynamic programming to generate subsets.
+
+9. **Climbing Stairs with Variable Steps**
+   - **Problem:** Given `k` steps, find the number of ways to reach the top.
+   - **Approach:** Dynamic programming with an array to store number of ways to reach each step.
+
+#### **Medium Level**
+
+10. **Longest Common Subsequence (LCS)**
+    - **Problem:** Given two strings, find the longest common subsequence between them.
+    - **Approach:** Dynamic programming using a 2D array.
+
+11. **Word Break**
+    - **Problem:** Given a string and a dictionary of words, check if the string can be segmented into valid words from the dictionary.
+    - **Approach:** Dynamic programming or recursion with memoization.
+
+12. **House Robber II**
+    - **Problem:** Houses are arranged in a circle. Find the maximum amount of money you can rob, with the restriction that you can’t rob two adjacent houses.
+    - **Approach:** Dynamic programming, split into two cases (rob first house or rob last house).
+
+13. **Jump Game**
+    - **Problem:** Given an array where each element represents the maximum jump length from that position, determine if you can reach the last index.
+    - **Approach:** Greedy or dynamic programming.
+
+14. **Longest Increasing Subsequence (LIS)**
+    - **Problem:** Find the length of the longest strictly increasing subsequence.
+    - **Approach:** Dynamic programming with a 1D array.
+
+15. **Knapsack Problem (0/1 Knapsack)**
+    - **Problem:** Given items with weights and values, find the maximum value that can be carried in a knapsack of limited capacity.
+    - **Approach:** Dynamic programming (bottom-up).
+
+16. **Partition Equal Subset Sum**
+    - **Problem:** Given a set of positive integers, find if it can be partitioned into two subsets with equal sum.
+    - **Approach:** Dynamic programming, subset sum problem.
+
+17. **Edit Distance (Levenshtein Distance)**
+    - **Problem:** Given two strings, find the minimum number of operations (insert, delete, replace) needed to convert one string to another.
+    - **Approach:** Dynamic programming with a 2D array.
+
+18. **Subset Sum**
+    - **Problem:** Given a set of integers, determine if there exists a subset whose sum equals a given target sum.
+    - **Approach:** Dynamic programming, subset sum problem.
+
+19. **Longest Palindromic Subsequence**
+    - **Problem:** Given a string, find the longest subsequence that is a palindrome.
+    - **Approach:** Dynamic programming (2D array).
+
+20. **Combination Sum**
+    - **Problem:** Given a set of numbers and a target, find all unique combinations of numbers that sum up to the target.
+    - **Approach:** Recursion with backtracking or dynamic programming.
+
+21. **String Interleaving**
+    - **Problem:** Given three strings, determine if the third string is an interleaving of the first two.
+    - **Approach:** Dynamic programming (2D array).
+
+---
+
+### **How to Progress:**
+1. **Start with Easy Problems** like **Fibonacci**, **Climbing Stairs**, and **Unique Paths**. These help you build a solid understanding of recursion and dynamic programming.
+2. Move on to **Medium Problems** like **Longest Common Subsequence**, **Word Break**, and **Knapsack** as they add complexity and teach you how to deal with more intricate DP problems and recursion.
+3. Gradually, you’ll get comfortable with concepts like memoization, bottom-up DP, and state optimization.
+
+By following this sequence, you can progressively strengthen your dynamic programming and recursion skills, making it easier to tackle harder problems later. You can find most of these problems on platforms like **LeetCode**, **HackerRank**, or **GeeksforGeeks** to practice!
