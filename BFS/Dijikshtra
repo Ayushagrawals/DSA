@@ -1,0 +1,9 @@
+//Dijikstra Agorithms
+
+/*
+single shortest path: source destination
+Negative cycle or if there negative edge
+Multi source shortest Path*/
+Dijistra works for shortest path but without negative edges
+
+for negative edges it works on bellmon ford and the floyd warshall
