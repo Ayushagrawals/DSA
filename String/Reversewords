@@ -1,0 +1,36 @@
+//Here we are deleting in between and hence we should i-- as string size is decrease by one
+class Solution {
+    public String reverseWords(String s) {
+        int count=0;
+        s=s.trim();
+        StringBuilder sb = new StringBuilder(s);
+        for(int i=0;i<sb.length()-1;i++)
+        {
+            if(count>=1 && sb.charAt(i)==' ')
+            {
+                
+                sb.delete(i, i+1);
+                i--;
+            }
+            else if(sb.charAt(i)==' ')
+            {
+                count+=1;
+            }
+            else{
+                count=0;
+            }
+        }
+        String[] a=sb.toString().split(" ");
+        
+        String d="";
+        for(int i=a.length-1;i>=0;i--)
+        {
+            d+=a[i];
+            if(i!=0)
+            {
+                d+=" ";
+            }
+        }
+        return d;
+    }
+}
