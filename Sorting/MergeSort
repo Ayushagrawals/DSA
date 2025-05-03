@@ -1,0 +1,42 @@
+//Here we should know how to merge two sorted arrays and how to use arrays.copyof range if e want to initliaze an array and the base case here is
+// we know if it's 1 then we need to return it hence we used end-start<=1
+class Solution {
+    public int[] sortArray(int[] nums) {
+        return mergesort(nums,0,nums.length);
+    }
+    public int[] mergesort(int[] nums,int start,int end)
+    {
+        if (end - start <= 1) {
+    return Arrays.copyOfRange(nums, start, end);
+}
+        int mid=(start+end)>>1;
+        int[] left=mergesort(nums,start,mid);
+        int[] right=mergesort(nums,mid,end);
+        int[] ans=merge(left,left.length,right,right.length);
+        return ans;
+    }
+    public int[] merge(int[] nums1, int m, int[] nums2, int n) {
+    int lcount = 0;
+    int rcount = 0;
+    int[] arr = new int[m + n];
+    int k = 0;
+
+    while (lcount < m && rcount < n) {
+        if (nums1[lcount] < nums2[rcount]) {
+            arr[k++] = nums1[lcount++];
+        } else {
+            arr[k++] = nums2[rcount++];
+        }
+    }
+
+    while (lcount < m) {
+        arr[k++] = nums1[lcount++];
+    }
+
+    while (rcount < n) {
+        arr[k++] = nums2[rcount++];
+    }
+
+    return arr;
+    }
+}
