@@ -36,3 +36,41 @@ public class Solution {
         return ans;
     }
 }
+////////////OR
+public class Solution {
+    public int solve(int[][] A) {
+        int count=1;
+        
+        Arrays.sort(A,(first,second)->Integer.compare(first[0],second[0]));
+        int[] start=new int[A.length];
+        int[] emd=new int[A.length];
+        
+        for(int i=0;i<A.length;i++)
+        {
+            start[i]=A[i][0];
+        }
+        int[] end=new int[A.length];
+        Arrays.sort(A,(first,second)->Integer.compare(first[1],second[1]));
+        for(int i=0;i<A.length;i++)
+        {
+            end[i]=A[i][1];
+        }
+        int startCount=0;
+        int endCount=0;
+        int ans=0;
+        int maxans=0;
+        while(startCount<start.length )
+        {
+            if(start[startCount]<end[endCount])
+            {
+                ans+=1;
+                
+            }
+            else{
+                endCount+=1;
+            }
+            startCount+=1;
+        }
+        return ans;
+    }
+}
