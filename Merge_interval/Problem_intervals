@@ -1,0 +1,93 @@
+Absolutely — **merging overlapping intervals** is a very important and commonly tested pattern in coding interviews.
+
+It forms the foundation for problems involving:
+
+* Timeline merging (like meetings, jobs)
+* Range aggregation
+* Event processing
+* Calendar booking
+* Processing logs and memory ranges
+
+---
+
+## ✅ Master List: Interval Merge Pattern – Categorized by Difficulty
+
+### 🟢 **Easy**
+
+These introduce the concept of overlapping intervals and merging logic.
+
+1. **Insert Interval** – \[Leetcode 57]
+   🔁 Insert a new interval and merge overlaps.
+   💡 Foundation problem (you just solved this!).
+   🎯 Asked in: Google, Microsoft, Amazon
+
+2. **Merge Intervals** – \[Leetcode 56]
+   🧠 Given N intervals, merge all overlapping ones.
+   🧩 Sort + merge technique
+   🎯 Very commonly asked: Amazon, Adobe, Uber
+
+3. **Meeting Rooms** – \[Leetcode 252]
+   🕒 Return true if a person can attend all meetings.
+   💡 Detect **any** overlaps between intervals
+   🎯 Amazon, Facebook
+
+---
+
+### 🟡 **Medium**
+
+Now they build on the merging pattern to apply more logic.
+
+4. **Meeting Rooms II** – \[Leetcode 253]
+   🏢 Find the minimum number of meeting rooms required.
+   🧠 Think of sweep line or priority queue
+   🎯 Asked in: Google, Facebook, Bloomberg
+
+5. **Employee Free Time** – \[Leetcode 759]
+   🤝 Given employee schedules (multiple lists of intervals), find common free time.
+   💡 Merge all schedules, then find gaps
+   🎯 Harder variant of merge + scan
+   🎯 Asked in: Google, LinkedIn
+
+6. **Interval List Intersections** – \[Leetcode 986]
+   🔁 Find all intersections between two lists of intervals.
+   🧠 Two pointers technique
+   🎯 Asked in: Amazon, Bloomberg
+
+7. **Non-overlapping Intervals** – \[Leetcode 435]
+   ❌ Remove the minimum number of intervals to make the rest non-overlapping
+   💡 Greedy with sorting
+   🎯 Asked in: Microsoft, Apple
+
+---
+
+### 🔴 **Hard**
+
+These involve clever applications of the merging pattern or more constraints.
+
+8. **Maximum Number of Events That Can Be Attended** – \[Leetcode 1353]
+   📅 Attend max number of non-overlapping events
+   🧠 Greedy + Heap
+   🎯 Asked in: Google
+
+9. **Remove Covered Intervals** – \[Leetcode 1288]
+   🧹 Count intervals that are **not covered** by others
+   💡 Sort and careful merge condition
+   🎯 Asked in: Amazon
+
+10. **Minimum Interval to Include Each Query** – \[Leetcode 1851]
+    ❓ Given intervals and queries, find the smallest interval that includes each query
+    💡 Hard — uses heap + sorting
+    🎯 Asked in: Google, Facebook
+
+---
+
+## 🧠 When Asked in Interviews:
+
+* 📍 Merge Intervals & Insert Interval are **very common phone screen/onsite questions**.
+* 📍 Meeting Rooms variants are often used in **timeline reasoning or resource allocation problems**.
+* 📍 Interval Intersections and Free Time questions test **two-pointer merging logic** and are **follow-ups** to basic merging.
+* 📍 Hard problems test your ability to **combine interval logic with data structures** like heaps, trees, or custom sorting.
+
+---
+
+Would you like this organized into a **trackable sheet** with links, difficulty, tags, and company tags?
