@@ -1,0 +1,33 @@
+/**
+ * Definition of Interval:
+ * public class Interval {
+ *     public int start, end;
+ *     public Interval(int start, int end) {
+ *         this.start = start;
+ *         this.end = end;
+ *     }
+ * }
+ */
+//Here we are sorting with start time because we want to see the overlappping so compared previous end with updcoming start
+class Solution {
+    public boolean canAttendMeetings(List<Interval> intervals) {
+        int count=0;
+        if(intervals.size()==0)
+        return true;
+        List<Interval> l=intervals.stream().sorted((e1,e2) -> Integer.compare(e1.start,e2.start)).collect(Collectors.toList());
+        int curre=l.get(0).end;
+        for(int i=1;i<l.size();i++)
+        {
+             if (l.get(i).start < curre) {
+                count++;
+            } else {
+                curre = l.get(i).end;
+            }
+            
+        }
+        if(count>=1)
+        return false;
+        else
+        return true;
+    }
+}
