@@ -1,0 +1,50 @@
+Sure! Here's the same list formatted as a **README-style markdown table**, great for GitHub or personal documentation.
+
+---
+
+# 🧩 Interval Merge Pattern – Practice Problems (Easy → Hard)
+
+A curated list of problems that use the **"merge overlapping intervals"** pattern — categorized by difficulty, tagged by concept, and marked with companies that ask them in interviews.
+
+---
+
+## ✅ Easy
+
+| Problem Name                                                      | Leetcode ID  | Difficulty | Tags                   | Asked In                  |
+| ----------------------------------------------------------------- | ------------ | ---------- | ---------------------- | ------------------------- |
+| [Insert Interval](https://leetcode.com/problems/insert-interval/) | Leetcode 57  | Easy       | Merge, Intervals       | Google, Microsoft, Amazon |
+| [Merge Intervals](https://leetcode.com/problems/merge-intervals/) | Leetcode 56  | Easy       | Merge, Sort, Intervals | Amazon, Adobe, Uber       |
+| [Meeting Rooms](https://leetcode.com/problems/meeting-rooms/)     | Leetcode 252 | Easy       | Intervals, Sort        | Amazon, Facebook          |
+
+---
+
+## 🟡 Medium
+
+| Problem Name                                                                              | Leetcode ID  | Difficulty | Tags                      | Asked In                    |
+| ----------------------------------------------------------------------------------------- | ------------ | ---------- | ------------------------- | --------------------------- |
+| [Meeting Rooms II](https://leetcode.com/problems/meeting-rooms-ii/)                       | Leetcode 253 | Medium     | Heap, Intervals, Greedy   | Google, Facebook, Bloomberg |
+| [Employee Free Time](https://leetcode.com/problems/employee-free-time/)                   | Leetcode 759 | Medium     | Merge, Intervals, K Lists | Google, LinkedIn            |
+| [Interval List Intersections](https://leetcode.com/problems/interval-list-intersections/) | Leetcode 986 | Medium     | Two Pointers, Intervals   | Amazon, Bloomberg           |
+| [Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/)     | Leetcode 435 | Medium     | Greedy, Intervals         | Microsoft, Apple            |
+
+---
+
+## 🔴 Hard
+
+| Problem Name                                                                                                        | Leetcode ID   | Difficulty | Tags                           | Asked In         |
+| ------------------------------------------------------------------------------------------------------------------- | ------------- | ---------- | ------------------------------ | ---------------- |
+| [Maximum Events That Can Be Attended](https://leetcode.com/problems/maximum-number-of-events-that-can-be-attended/) | Leetcode 1353 | Hard       | Greedy, Heap, Intervals        | Google           |
+| [Remove Covered Intervals](https://leetcode.com/problems/remove-covered-intervals/)                                 | Leetcode 1288 | Hard       | Sort, Intervals                | Amazon           |
+| [Minimum Interval to Include Each Query](https://leetcode.com/problems/minimum-interval-to-include-each-query/)     | Leetcode 1851 | Hard       | Heap, Binary Search, Intervals | Google, Facebook |
+
+---
+
+## 🧠 Tips
+
+* Practice Easy problems first to build interval sorting + overlap intuition.
+* Medium problems often require adding **priority queues or two-pointer logic**.
+* Hard problems combine intervals with **heaps, maps, and more advanced greedy logic**.
+
+---
+
+Would you like this as a downloadable `README.md` file as well?
