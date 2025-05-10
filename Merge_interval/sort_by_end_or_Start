@@ -1,0 +1,45 @@
+Absolutely — this is a key insight that unlocks many interval-based problems. Here's a clear breakdown:
+
+---
+
+## 🔍 When to Sort by **Start Time** vs **End Time**
+
+| 🧠 Goal of Problem                                                                               | ✅ Sort By      | 📌 Why                                                                      |
+| ------------------------------------------------------------------------------------------------ | -------------- | --------------------------------------------------------------------------- |
+| **Merging intervals** (e.g., `Merge Intervals`, `Insert Interval`)                               | **Start time** | So that overlapping intervals are adjacent — easy to merge in one pass.     |
+| **Detecting overlaps/conflicts** (e.g., `Meeting Rooms I`, `Insert Interval`)                    | **Start time** | You want to compare each interval to the one before it — merging if needed. |
+| **Maximize number of non-overlapping intervals** (e.g., `Non-overlapping Intervals`)             | **End time**   | Greedy: always pick the interval that ends earliest to leave room for more. |
+| **Minimize resources (rooms/arrows)** (e.g., `Meeting Rooms II`, `Min Arrows to Burst Balloons`) | **End time**   | Again, greedily finish early to reuse resources / reduce counts.            |
+| **Remove covered intervals**                                                                     | Start ↑, End ↓ | To handle full containment correctly (e.g., `[1,10]` contains `[2,5]`).     |
+
+---
+
+### 📌 General Rule of Thumb:
+
+* ✅ **Sort by Start Time** when:
+
+  * You're **merging** or tracking adjacent overlaps.
+  * You care about **processing order** (e.g., timeline simulation).
+
+* ✅ **Sort by End Time** when:
+
+  * You're solving **greedy selection/counting** problems.
+  * You want to **maximize** non-overlaps or **minimize** operations (like removals or arrows).
+
+---
+
+### 🧠 Visual Example:
+
+**Input**: `[[1,3], [2,4], [3,5], [7,8]]`
+
+* **Merging Intervals**:
+  Sort by **start** → group overlapping intervals
+  → Output: `[[1,5], [7,8]]`
+
+* **Non-overlapping Intervals (remove min)**:
+  Sort by **end** → keep earliest-ending intervals
+  → Keep: `[1,3], [3,5], [7,8]` → Remove `[2,4]`
+
+---
+
+Would you like a quick cheat sheet image summarizing all of this with examples for each case?
