@@ -1,0 +1,37 @@
+//This question looks very confusing because it involves 2d array and include list and array. it has broken to three part before merge we are addin the array a interval and for the merge we are 
+//comapring with the B and updating the B as it is the one everytime it is going to be merged once done we add it and add the remaning array
+
+public class Solution {
+    public int[][] insert(int[][] A, int[] B) {
+        List<int[]> ans2 = new ArrayList<>();
+        int i=0;
+        int n=A.length;
+        if (A.length == 0) {
+            ans2.add(new int[]{B[0], B[1]});
+            return ans2.toArray(new int[ans2.size()][]);
+        }
+         while(i<n && A[i][1]<B[0])
+        {
+            ans2.add(new int[]{A[i][0], A[i][1]});
+            i++;
+        }
+       
+            
+       while (i < n && A[i][1] >= B[0] && A[i][0] <= B[1]) 
+        {
+            B[0]=Math.min(B[0],A[i][0]);
+            B[1]=Math.max(B[1],A[i][1]);
+            i++;
+        }
+        ans2.add(new int[]{B[0], B[1]}); 
+        while (i < n) {
+            ans2.add(new int[]{A[i][0], A[i][1]});
+            i++;
+        }
+        
+        return ans2.toArray(new int[ans2.size()][]);
+    }
+}
+ ans2.toArray(new int[ans2.size()][]);
+    }
+}
