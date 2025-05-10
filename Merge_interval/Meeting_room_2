@@ -1,0 +1,38 @@
+//Here we are checking meeting room minimum at a time which is overlapping now we can't issue traditional merge method because there could be three or 
+//more meeting at a time comparing all at a time will increase complexity so we will sort them independantly and check for start and end time if start
+//time is small then meetint then it means more room required due to end time not over.
+public class Solution {
+    public int solve(int[][] A) {
+        int count=1;
+        
+        Arrays.sort(A,(first,second)->Integer.compare(first[0],second[0]));
+        int[] start=new int[A.length];
+        int[] emd=new int[A.length];
+        
+        for(int i=0;i<A.length;i++)
+        {
+            start[i]=A[i][0];
+        }
+        int[] end=new int[A.length];
+        Arrays.sort(A,(first,second)->Integer.compare(first[1],second[1]));
+        for(int i=0;i<A.length;i++)
+        {
+            end[i]=A[i][1];
+        }
+        int startCount=0;
+        int endCount=0;
+        int ans=0;
+        int maxans=0;
+        for(startCount=0,endCount=0;startCount<start.length;startCount+=1)
+        {
+            if(start[startCount]<end[endCount])
+            {
+                ans+=1;
+            }
+            else{
+                endCount+=1;
+            }
+        }
+        return ans;
+    }
+}
