@@ -1,0 +1,70 @@
+Perfect! Here's a well-documented version of your solution that captures the **core logic**, **why sorting by end works**, and **key observations** — ideal for storing in your GitHub for future reference.
+
+---
+
+### 📌 File: `MinimumArrowsToBurstBalloons.java`
+
+```java
+// Greedy Approach: Minimum Number of Arrows to Burst Balloons
+
+// Problem Summary:
+// Each balloon is represented as [x_start, x_end], placed along the x-axis.
+// An arrow shot at any x will burst all balloons where x_start <= x <= x_end.
+// Goal: Burst all balloons with the fewest arrows possible.
+
+class Solution {
+    public int findMinArrowShots(int[][] points) {
+        // ✅ Step 1: Sort balloons by their ending position (xend)
+        // Why? Sorting by end ensures we always shoot the arrow as "late" as possible
+        // to hit the current balloon and any overlapping ones after it.
+        Arrays.sort(points, (a, b) -> Integer.compare(a[1], b[1]));
+
+        // 🎯 Shoot the first arrow at the end of the first balloon
+        int arrows = 1;
+        int arrowPos = points[0][1]; // First arrow at xend of first balloon
+
+        // 🔁 Go through the rest of the balloons
+        for (int i = 1; i < points.length; i++) {
+            // 🔍 Check if current balloon overlaps with the last arrow
+            if (points[i][0] <= arrowPos) {
+                // ✅ Overlaps → already burst by current arrow → do nothing
+                continue;
+            }
+
+            // ❌ No overlap → needs a new arrow
+            // 🎯 Shoot at the end of this new balloon
+            arrowPos = points[i][1];
+            arrows++;
+        }
+
+        return arrows;
+    }
+}
+```
+
+---
+
+### 🧠 Key Takeaways to Add in GitHub Notes:
+
+```
+🧠 Key Idea: Use a Greedy Strategy
+- Sort by xend (ending position), not xstart
+- Always shoot an arrow at the end of the current interval
+- Skip all balloons that overlap with this arrow
+- This ensures each arrow bursts the maximum number of balloons
+
+❓ Why not sort by start?
+- Sorting by xstart doesn't help you know when to shoot the arrow
+- You may shoot too early and miss overlapping balloons that end sooner
+- Sorting by xend ensures you're making the optimal greedy choice every time
+
+💡 Pattern Recognition:
+- This is similar to:
+  - Activity Selection Problem
+  - Meeting Room Scheduling
+  - Interval Covering Problems
+```
+
+---
+
+Would you like me to help organize your GitHub notes for different DSA patterns like this one?
