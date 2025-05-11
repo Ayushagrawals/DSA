@@ -1,0 +1,68 @@
+# 🧠 Interval Scheduling & Sweep Line Pattern Practice Sheet
+
+This sheet covers **Meeting Rooms**, **Minimum Platforms**, and other interval/scheduling problems that use sorting + two pointers or heap.
+
+---
+
+## 🔥 Core Scheduling Problems
+
+| Problem           | Type          | Difficulty | Company          | Link                                                                                      |
+| ----------------- | ------------- | ---------- | ---------------- | ----------------------------------------------------------------------------------------- |
+| Meeting Rooms I   | Overlap Check | Easy       | Google           | [Leetcode #252](https://leetcode.com/problems/meeting-rooms/)                             |
+| Meeting Rooms II  | Min Rooms     | Medium     | Google, Facebook | [Leetcode #253](https://leetcode.com/problems/meeting-rooms-ii/)                          |
+| Minimum Platforms | Min Platforms | Medium     | Amazon           | [GFG Problem](https://practice.geeksforgeeks.org/problems/minimum-platforms-1587115620/1) |
+
+---
+
+## 🧠 Interval Manipulation (Greedy, Merge)
+
+| Problem                      | Type                    | Difficulty | Company  | Link                                                                                       |
+| ---------------------------- | ----------------------- | ---------- | -------- | ------------------------------------------------------------------------------------------ |
+| Merge Intervals              | Merge                   | Medium     | Google   | [Leetcode #56](https://leetcode.com/problems/merge-intervals/)                             |
+| Insert Interval              | Merge + Insert          | Medium     | Facebook | [Leetcode #57](https://leetcode.com/problems/insert-interval/)                             |
+| Non-overlapping Intervals    | Remove to avoid overlap | Medium     | Amazon   | [Leetcode #435](https://leetcode.com/problems/non-overlapping-intervals/)                  |
+| Min Arrows to Burst Balloons | Greedy                  | Medium     | Google   | [Leetcode #452](https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/) |
+
+---
+
+## ⏰ Time-Based Event Handling (Sweep Line)
+
+| Problem                   | Type                | Difficulty | Company  | Link                                                                 |
+| ------------------------- | ------------------- | ---------- | -------- | -------------------------------------------------------------------- |
+| Car Pooling               | Booking/Capacity    | Medium     | Uber     | [Leetcode #1094](https://leetcode.com/problems/car-pooling/)         |
+| My Calendar I             | Booking             | Medium     | Amazon   | [Leetcode #729](https://leetcode.com/problems/my-calendar-i/)        |
+| My Calendar II            | Double Booking      | Medium     | Amazon   | [Leetcode #731](https://leetcode.com/problems/my-calendar-ii/)       |
+| Employee Free Time        | Free Interval Merge | Hard       | Facebook | [Leetcode #759](https://leetcode.com/problems/employee-free-time/)   |
+| Max Overlapping Intervals | Count overlaps      | Medium     | Google   | [Discussion](https://leetcode.com/discuss/interview-question/356960) |
+
+---
+
+## 🧩 Advanced / Variants
+
+| Problem                | Type                  | Difficulty | Company        | Link                                                                                              |
+| ---------------------- | --------------------- | ---------- | -------------- | ------------------------------------------------------------------------------------------------- |
+| Skyline Problem        | Sweep Line + Max Heap | Hard       | Google, Airbnb | [Leetcode #218](https://leetcode.com/problems/the-skyline-problem/)                               |
+| Range Addition II      | 2D Interval           | Easy       |                | [Leetcode #598](https://leetcode.com/problems/range-addition-ii/)                                 |
+| Max Events Attended II | DP + Greedy           | Hard       | Google         | [Leetcode #1751](https://leetcode.com/problems/maximum-number-of-events-that-can-be-attended-ii/) |
+
+---
+
+## 📌 Suggested Practice Order
+
+1. Meeting Rooms I
+2. Meeting Rooms II
+3. Minimum Platforms
+4. Merge Intervals
+5. Insert Interval
+6. Non-overlapping Intervals
+7. Min Arrows to Burst Balloons
+8. Car Pooling
+9. My Calendar I / II
+10. Employee Free Time
+11. Skyline Problem (optional advanced)
+
+---
+
+✅ **Tip:** Start with sorting + two-pointer logic, then progress to heap-based variants.
+
+Let me know if you'd like solutions or patterns explained for any of these!
