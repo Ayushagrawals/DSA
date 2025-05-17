@@ -1,0 +1,39 @@
+873. Length of Longest Fibonacci Subsequence
+
+class Solution {
+    public int lenLongestFibSubseq(int[] arr) {
+        Set<Integer> s=new HashSet<Integer>();
+        //s.add(0);
+        //s.add(1);
+        //int[] arr2=new int[arr.length];
+        int maxlength=0;
+        for(int i=0;i<arr.length;i++)
+        {
+            s.add(arr[i]);
+        }
+        for(int i=0;i<arr.length;i++)
+        {
+            for(int j=i+1;j<arr.length;j++)
+            {
+                int first=arr[i];
+                int last=arr[j];
+                int count=2;
+                while(s.contains(first+last))
+                {
+                    System.out.println(first+" "+last);
+                    int val=last;
+                    last=first+last;
+                    first=val;
+                    count+=1;
+                    
+                    
+                }
+                maxlength=Math.max(maxlength,count);
+            }
+        }
+        if(maxlength==2)
+        return 0;
+        return maxlength;
+        
+    }
+}
