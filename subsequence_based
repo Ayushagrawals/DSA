@@ -1,0 +1,110 @@
+//Subsequence based like two varaible making some result in continuation like this qustion Length of Longest Fibonacci Subsequence
+
+
+
+
+Yes — all of the above questions fall under **well-defined problem-solving categories**, primarily involving **Subsequences** and often **Dynamic Programming (DP)** or **Hashing**. Here's a breakdown of the core categories and how these problems map to them:
+
+---
+
+### 🔹 **1. Subsequence-Based Problems**
+
+These involve choosing elements **in order but not necessarily contiguous**.
+
+| Problem                                                   | Category                          | Key Techniques           |
+| --------------------------------------------------------- | --------------------------------- | ------------------------ |
+| Longest Fibonacci-like Subsequence (873)                  | Subsequence + Pattern Rule        | HashSet, Brute Force, DP |
+| Longest Arithmetic Subsequence (1027)                     | Subsequence + Fixed Difference    | HashMap of diffs + DP    |
+| Longest Geometric Subsequence                             | Subsequence + Fixed Ratio         | HashMap of ratios        |
+| Longest Increasing Subsequence (300)                      | Subsequence + Strictly Increasing | DP, Binary Search        |
+| Longest Bitonic Subsequence                               | Subsequence with Inc → Dec        | Two-pass DP (LIS + LDS)  |
+| Number of Longest Increasing Subsequences (673)           | Subsequence + Count Variants      | DP                       |
+| Count Different Subsequences Forming a Given String (940) | Subsequence + Counting            | DP                       |
+
+---
+
+### 🔹 **2. Continuation Pattern Detection**
+
+Here the focus is on **extending a pattern** — like Fibonacci, arithmetic, or matching — across a subsequence.
+
+| Problem                            | Pattern                                    | Category                         |
+| ---------------------------------- | ------------------------------------------ | -------------------------------- |
+| Longest Fibonacci-like Subsequence | `a + b = c`                                | Fibonacci-like sequence          |
+| Longest Arithmetic Subsequence     | `b - a = c - b`                            | Arithmetic progression           |
+| Arithmetic Slices (413)            | `arr[i+2] - arr[i+1] == arr[i+1] - arr[i]` | Contiguous Arithmetic (subarray) |
+| Longest Geometric Subsequence      | `b / a = c / b`                            | Geometric progression            |
+
+---
+
+### 🔹 **3. DP on Subsequences**
+
+Subsequence problems involving **optimization or counting**, typically solved via **Dynamic Programming**.
+
+| Problem                          | What’s Optimized  | Key Technique          |
+| -------------------------------- | ----------------- | ---------------------- |
+| Longest Increasing Subsequence   | Length of LIS     | DP or Binary Search    |
+| Number of LIS                    | Count of all LIS  | DP with extra tracking |
+| LCS (Longest Common Subsequence) | Match two strings | 2D DP                  |
+
+---
+
+### 🔹 **4. Subarray vs Subsequence**
+
+| Type        | Contiguous | Ordered | Example Problems                     |
+| ----------- | ---------- | ------- | ------------------------------------ |
+| Subarray    | ✅          | ✅       | Arithmetic Slices (413), Kadane’s    |
+| Subsequence | ❌          | ✅       | All above (Fibonacci-like, LIS, LCS) |
+
+---
+
+### 🔹 TL;DR: Main Categories for Your Reference
+
+1. **Subsequence + DP** → LIS, LCS, Fibonacci-like, Arithmetic subsequence
+2. **Subsequence + Pattern Rule** → Fibonacci / Arithmetic / Geometric
+3. **Subsequence + HashMap** → For tracking differences or sums efficiently
+4. **Contiguous Subarray Problems** (contrast: sliding window, prefix sum, etc.)
+
+---
+
+Would you like a **Google Sheet-style categorized list** for tracking practice across these types?
+
+
+
+Yes — **Longest Increasing Subsequence (LIS)** and similar problems fall under the broader category of:
+
+---
+
+### 🗂️ **Subsequence Dynamic Programming (Subsequence DP)**
+
+#### ✅ Core Category:
+
+**"Dynamic Programming on Subsequences"**
+
+This includes problems where:
+
+* You **don’t need contiguous elements**.
+* You’re allowed to **skip or delete elements**.
+* You're trying to **build the longest (or optimal) valid subsequence**.
+
+---
+
+### 🔧 Subcategories Under This:
+
+| Subcategory                         | Problems                                                      |
+| ----------------------------------- | ------------------------------------------------------------- |
+| **Classic LIS**                     | Longest Increasing Subsequence (Leetcode 300)                 |
+| **LIS Variants**                    | Max Sum Increasing Subsequence, Longest Bitonic Subsequence   |
+| **Fibonacci-Like**                  | Longest Fibonacci-like Subsequence (Leetcode 873)             |
+| **Arithmetic/Geometric**            | Longest Arithmetic Subsequence, Longest Geometric Subsequence |
+| **String Subsequence**              | Longest Common Subsequence, Edit Distance                     |
+| **Subset/Subsequence Optimization** | 0/1 Knapsack, Partition Equal Subset Sum                      |
+
+---
+
+### ✅ Summary:
+
+So **LIS** belongs to the **Subsequence DP** family.
+If you solve **LIS + Fibonacci-like + Arithmetic Subseq + LCS**, you’ll build a **strong foundation** in this category.
+
+Would you like a curated progression list of problems in this category (from brute-force to DP)?
+
