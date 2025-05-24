@@ -1,0 +1,30 @@
+//Question that involve the repeatation of the elements with k times and one element which is not repeating we can use below code
+//Here what we are doing is we are going through each bit of the array element and checking if it's set if it is then we are counting it for all array
+//element and after that checking if there reminder is dividible by they are repeating if yes we are counting at those position as the repeating exaclty
+//k times so after that checking it should be divisible by k reminder should be 0 if not it means other elment not repeated is there hence we will
+//mark it as 1;
+
+
+public class Solution {
+    // DO NOT MODIFY THE ARGUMENTS WITH "final" PREFIX. IT IS READ ONLY
+    public int singleNumber(final int[] A) {
+        int val=0;
+        int ans=0;
+        for(int bi=1;bi<=32;bi++)
+        {
+            val=0;
+            for(int i=0;i<A.length;i++)
+            {
+                if((A[i] & (1<<bi))!=0)
+                {
+                    val+=1;
+                }
+            }
+            if(val%3!=0)
+            {
+                ans=ans | 1<<bi;
+            }
+        }
+        return ans;
+    }
+}
