@@ -17,3 +17,7 @@ Toggle ith bit
 
 as we need to do operation with ith bit of A so will do 1<<B and then we have to invert it so will do or if it's make it will make it 0 and 1
 return A^(1<<B);
+
+to unset ith bit -
+
+num = num & ~(1 << i);
