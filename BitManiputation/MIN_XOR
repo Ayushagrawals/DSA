@@ -1,0 +1,13 @@
+//Given an integer array A of N integers, find the pair of integers in the array which have minimum XOR value. Report the minimum XOR value.
+//Here the idea is the xor min is likely for the element with adjacent elment hence we sorted it and doing xor
+public class Solution {
+    public int findMinXor(int[] A) {
+        int minXor = Integer.MAX_VALUE;
+        Arrays.sort(A);
+         for (int i = 1; i < A.length; i++) {
+            int xorVal = A[i] ^ A[i - 1];
+            minXor = Math.min(minXor, xorVal);
+        }
+        return minXor;
+    }
+}
