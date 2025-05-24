@@ -1,0 +1,19 @@
+//Left shift represented as << it shifts left the value hence it same is increase power by two
+
+//Power of left shift operator
+1.set any bit(turn on make it 1)
+2. unset any bit
+3. check any ith bit
+4. to toggle any bit
+
+set ith bit -
+
+eg a=101101
+make 3rd bit on 
+so we can left shift a varilable
+first we can 1<<B and we want to unset we should multiply that bit by 0 so we do is n && ~(1<<B)
+
+Toggle ith bit
+
+as we need to do operation with ith bit of A so will do 1<<B and then we have to invert it so will do or if it's make it will make it 0 and 1
+return A^(1<<B);
