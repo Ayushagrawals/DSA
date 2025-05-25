@@ -1,0 +1,32 @@
+
+//Given an array containing 0s and 1s. Find the number of subarrays having equal number of 0s and 1s.
+//Here we are replacing 0 with -1 because it help in calculating as 1 and -1 sum as 0 so we would know it's coming again it means it's already there
+class Solution {
+    // Function to count subarrays with 1s and 0s.
+    static int countSubarrWithEqualZeroAndOne(int arr[], int n) {
+        // add your code here
+        Map<Integer, Integer> map = new HashMap<>();
+        map.put(0, 1);
+        for(int i=0;i<arr.length;i++)
+        {
+            if(arr[i]==0)
+            {
+                arr[i]=-1;
+            }
+        }
+        int count=0;
+        int ans=0;
+        int sum=0;
+        for(int i=0;i<arr.length;i++)
+        {
+            sum+=arr[i];
+            if (map.containsKey(sum)) {
+                ans += map.get(sum); 
+            }
+
+            map.put(sum, map.getOrDefault(sum, 0) + 1);
+        }
+        return ans;
+        
+    }
+}
