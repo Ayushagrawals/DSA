@@ -1,0 +1,27 @@
+// User function Template for Java
+//Here we are using index to keep start and end index using it difference we can do it and calculate it.
+class Solution {
+    public int longestSubarray(int[] arr, int k) {
+        // code here
+        HashMap<Integer,Integer> h=new HashMap<Integer,Integer>();
+        int sum=0;
+        int maxans=0;
+        h.put(0, -1);
+        for(int i=0;i<arr.length;i++)
+        {
+            sum+=arr[i];
+            
+            if(h.containsKey(sum-k))
+            {
+                int val=h.get(sum-k);
+                maxans=Math.max(maxans,i-val);
+            }
+            
+            if (!h.containsKey(sum)) {
+                h.put(sum, i);
+            }
+            
+        }
+        return maxans;
+    }
+}
