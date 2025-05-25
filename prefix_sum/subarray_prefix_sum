@@ -1,0 +1,114 @@
+Great! You're building a strong foundation in prefix sum + hash map/set patterns. Here's a **curated list of important remaining questions** related to:
+
+---
+
+## 🔁 **Prefix Sum + HashMap/Set Based Subarray Problems**
+
+These problems are similar in nature to "Subarray with 0 sum" or "Subarray sum equals k" but test slightly different concepts like counting, length, or element transformation.
+
+---
+
+### ✅ 1. **Longest Subarray with Sum K**
+
+> Given an array, find the length of the longest subarray with sum = K.
+
+* 📌 Use prefix sum + **first occurrence index** in HashMap.
+* If `sum - k` is seen, then subarray from that index to current has sum `k`.
+
+🔗 [GFG version](https://www.geeksforgeeks.org/longest-sub-array-sum-k/)
+
+---
+
+### ✅ 2. **Count of Subarrays with 0 Sum**
+
+> Count the total number of subarrays that sum to 0.
+
+* 💡 Use prefix sum + hashmap for **frequency**.
+* Same idea as Subarray sum equals k, with `k = 0`.
+
+🔗 [GFG version](https://www.geeksforgeeks.org/count-subarrays-with-zero-sum/)
+
+---
+
+### ✅ 3. **Find Subarrays With Equal Number of 0s and 1s**
+
+> Convert all 0s → -1, then reduce it to "subarray with sum 0".
+
+* ⚠️ Trick: Treat 0s as -1s
+* Now look for subarrays with sum = 0
+
+🔗 [Leetcode 525](https://leetcode.com/problems/contiguous-array/)
+
+---
+
+### ✅ 4. **Binary Subarray With Sum**
+
+> Count number of subarrays with sum = k in a binary array.
+
+* 👀 Works exactly like “Subarray Sum Equals K”.
+* Input: Binary array + sum = k
+
+🔗 [Leetcode 930](https://leetcode.com/problems/binary-subarrays-with-sum/)
+
+---
+
+### ✅ 5. **Subarrays With Sum Divisible by K**
+
+> Count number of subarrays whose sum is divisible by `k`.
+
+* Use modulo trick: `prefixSum % k`
+* Handle negative mods carefully: `(sum % k + k) % k`
+
+🔗 [Leetcode 974](https://leetcode.com/problems/subarray-sums-divisible-by-k/)
+
+---
+
+### ✅ 6. **Minimum Length Subarray with Sum ≥ K**
+
+> Find the shortest subarray with sum ≥ k (not equal).
+
+* ❗ This is a **sliding window + deque** problem (not prefix sum based).
+* Works only for positive numbers
+
+🔗 [Leetcode 209](https://leetcode.com/problems/minimum-size-subarray-sum/)
+
+---
+
+### ✅ 7. **Subarray With Equal Number of Even and Odd**
+
+> Replace even → +1, odd → -1
+> Then use prefix sum to find subarrays with sum = 0
+
+🔗 GFG variation: [Link](https://www.geeksforgeeks.org/find-subarray-even-number-elements/)
+
+---
+
+### ✅ 8. **Subarray Sum Closest to 0**
+
+> Find subarray with sum closest to 0.
+
+* Sort prefix sums, then find two closest values.
+
+🔗 Advanced variation: Available on interview platforms
+
+---
+
+## 📚 Summary Table
+
+| Problem                     | Core Idea               | Structure Used        | LC/GFG Link |
+| --------------------------- | ----------------------- | --------------------- | ----------- |
+| Subarray Sum Equals K       | Count                   | HashMap (freq)        | LC 560      |
+| Longest Subarray with Sum K | Max Length              | HashMap (first index) | GFG         |
+| Count Subarrays with Sum 0  | Count                   | HashMap (freq)        | GFG         |
+| Equal 0s and 1s             | Convert 0→-1 → Sum=0    | HashMap               | LC 525      |
+| Binary Subarray With Sum    | Binary version of Sum K | HashMap               | LC 930      |
+| Subarray Sum % K == 0       | Modulo + Map            | HashMap (mod count)   | LC 974      |
+| Min Subarray Sum ≥ K        | Sliding Window          | Deque                 | LC 209      |
+
+---
+
+Would you like this:
+
+* As a **practice tracker sheet**
+* With a **step-by-step roadmap** (easy → hard)
+* Or we can start solving each with you one-by-one?
