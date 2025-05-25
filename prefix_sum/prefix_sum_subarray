@@ -1,0 +1,82 @@
+Great question — you're already covering the **core prefix sum + hashmap** patterns. Let's now list:
+
+---
+
+## ✅ **Prefix Sum + HashMap Pattern Master List**
+
+### 🔹 A. **Presence-based**
+
+| Problem                                                                | Goal                                            | Idea                                           |
+| ---------------------------------------------------------------------- | ----------------------------------------------- | ---------------------------------------------- |
+| **1. Subarray with 0 Sum**                                             | Return `true/false` if any subarray has sum = 0 | Prefix sum repeats ⇒ subarray sum = 0          |
+| **2. Subarray with Sum = K**                                           | Return count of such subarrays                  | HashMap stores `sum → freq`                    |
+| **3. Longest Subarray with Sum = K**                                   | Return max length                               | HashMap stores `sum → earliest index`          |
+| **4. Check if array contains subarray with equal number of 0s and 1s** | Return `true/false` or count                    | Convert 0s to -1s → Reduce to subarray sum = 0 |
+
+---
+
+### 🔹 B. **Index-Distance Based**
+
+| Problem                                                               | Goal                        | Idea                                         |
+| --------------------------------------------------------------------- | --------------------------- | -------------------------------------------- |
+| **5. Longest Subarray with Equal 0s and 1s**                          | Return max length           | 0 → -1, use `sum → earliest index`           |
+| **6. Longest Subarray with Equal Numbers of 1s and 2s (or 0s/1s/2s)** | Multi-variable sum tracking | Use `Map<difference pair, index>` (advanced) |
+
+---
+
+### 🔹 C. **Binary Array Variants**
+
+| Problem                                               | Goal         | Idea                               |
+| ----------------------------------------------------- | ------------ | ---------------------------------- |
+| **7. Count subarrays with equal number of 1s and 0s** | Return count | 0 → -1, reduce to subarray sum = 0 |
+| **8. Count subarrays with equal number of 1s and 2s** | Similar      | Map of diff between counts         |
+
+---
+
+### 🔹 D. **K-sum Variants**
+
+| Problem                                               | Goal                 | Idea                                    |
+| ----------------------------------------------------- | -------------------- | --------------------------------------- |
+| **9. Number of subarrays with sum divisible by K**    | Count such subarrays | Use modulo: `prefixSum % k` → frequency |
+| **10. Count of subarrays where sum is multiple of K** | Same as above        | Handle negative mods carefully          |
+
+---
+
+### 🔹 E. **2D Matrix Prefix Sum**
+
+| Problem                                 | Goal                           | Idea                                     |
+| --------------------------------------- | ------------------------------ | ---------------------------------------- |
+| **11. Count submatrices that sum to K** | 2D version of subarray sum = K | Fix two rows and reduce to 1D prefix sum |
+
+---
+
+## 🧠 What You’ve Already Done:
+
+* [x] Subarray with 0 Sum
+* [x] Subarray with Sum = K
+* [x] Longest Subarray with Sum = K
+* [x] Count subarrays with equal 0s and 1s
+
+---
+
+## 🔜 What You Can Do Next:
+
+### ✅ Immediate:
+
+* [ ] **Longest Subarray with Equal 0s and 1s**
+* [ ] **Count Subarrays with Sum Divisible by K**
+* [ ] **Longest Subarray with Equal 1s and 2s (0s, 1s, 2s)**
+
+### 🔁 Advanced:
+
+* [ ] **Count Submatrices That Sum to K (2D version)**
+
+---
+
+Let me know if you want:
+
+* A **Leetcode/GeeksForGeeks list** for these
+* A **custom practice sheet**
+* Or to **start solving one of these now** (with dry run)
+
+You’re 70% done with all key prefix sum patterns — let’s finish strong 💪
