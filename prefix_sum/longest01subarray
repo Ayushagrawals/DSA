@@ -1,0 +1,33 @@
+//Given a binary array nums, return the maximum length of a contiguous subarray with an equal number of 0 and 1.
+
+//Here we are checking for the max subarray with 0 and 1 it is same as max subarray with equal k or max subarray with equal 0 we are doing same here
+//adding only when sum is not there if it's there calculating the distance and storing in max value if it's greater
+
+class Solution {
+    public int findMaxLength(int[] nums) {
+        Map<Integer, Integer> map = new HashMap<>();
+        map.put(0, -1);
+        for(int i=0;i<nums.length;i++)
+        {
+            if(nums[i]==0)
+            {
+                nums[i]=-1;
+            }
+        }
+        int count=0;
+        int ans=0;
+        int sum=0;
+        for(int i=0;i<nums.length;i++)
+        {
+            sum+=nums[i];
+            if (map.containsKey(sum)) {
+                ans=Math.max(ans,i-map.get(sum));
+            }
+        else if(!map.containsKey(sum))
+        {
+            map.put(sum,i);
+        }
+        }
+        return ans;
+    }
+}
