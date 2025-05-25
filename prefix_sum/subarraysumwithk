@@ -1,0 +1,61 @@
+//Prefix sum category
+//To find subarray with sum k here we are using hashmap and using sum to track values and if sum-k exist we found and we increasing it's frequency
+//how many times it's repeated
+class Solution {
+    public int subarraySum(int[] nums, int k) {
+
+        int sum=0;
+        int count=0;
+        HashMap<Integer,Integer> h=new HashMap<Integer,Integer>();
+        h.put(0,1);
+        for(int i=0;i<nums.length;i++)
+        {
+            sum+=nums[i];
+            
+            if(h.containsKey(sum-k))
+            {
+                int val=h.get(sum-k);
+                count+=val;
+            }
+                h.put(sum, h.getOrDefault(sum, 0) + 1);
+            
+        }
+        return count;
+        /*
+        int sum=0;
+        int count=0;
+        for(int i=0;i<nums.length;i++)
+        {
+            sum=0;
+            for(int j=i;j<nums.length;j++)
+            {
+                sum+=nums[j];
+                if(sum==k)
+                {
+                    count+=1;
+                }
+            }
+        }
+        return count;*/
+
+        //Variable sliding window
+        /*int start=0;
+        int sum=0;
+        int count=0;
+        for(int i=0;i<nums.length;i++)
+        {
+            sum+=nums[i];
+            while(sum>k)
+            {
+                sum-=nums[start];
+                start+=1;
+            }
+            if(sum==k)
+            {
+                count+=1;
+            }
+            
+        }
+        return count;*/
+    }
+}
