@@ -1,0 +1,73 @@
+Absolutely! Here’s a curated list of popular and classic **subarray problems** that use the bitwise concepts of **OR**, **AND**, **XOR**, plus related prefix, contribution, or sliding window techniques. These questions often appear in interviews or competitive programming and are great for mastering bitwise subarray patterns.
+
+---
+
+## Bitwise Subarray Problems List (OR, AND, XOR)
+
+### 1. **Sum of Bitwise OR of All Subarrays**
+
+* Given an array, find the sum of bitwise OR of every subarray.
+* Key idea: Contribution technique counting how many subarrays a bit is set in.
+* Example: [Bitwise OR subarrays sum](https://leetcode.com/problems/sum-of-subarray-ranges/), [Scaler topic](https://www.scaler.com/topics/bitwise-or-of-all-subarrays/)
+
+### 2. **Sum of Bitwise AND of All Subarrays**
+
+* Find the sum of bitwise AND over all subarrays.
+* More challenging due to AND’s restrictive nature. Often solved with stack or monotonic stack to track segments where bits are set.
+* Example: [Sum of bitwise AND subarrays - GeeksforGeeks](https://www.geeksforgeeks.org/sum-bitwise-and-subarrays/)
+
+### 3. **Count Subarrays with XOR = K**
+
+* Count the number of subarrays whose XOR equals a given value K.
+* Uses prefix XOR and hashmap for efficient counting.
+* Example: [Count subarrays with XOR K - GeeksforGeeks](https://www.geeksforgeeks.org/count-number-subarrays-xor-less-k/)
+
+### 4. **Maximum XOR of Two Numbers in an Array**
+
+* Find two numbers whose XOR is maximum.
+* Uses Trie (prefix tree) to efficiently find max XOR pairs.
+* Example: [Maximum XOR of two numbers - LeetCode 421](https://leetcode.com/problems/maximum-xor-of-two-numbers-in-an-array/)
+
+### 5. **Minimum XOR of any Pair in the Array**
+
+* Find pair with minimum XOR value.
+* Sort and compare adjacent elements for minimum XOR.
+* Example: [Minimum XOR value pair - InterviewBit](https://www.interviewbit.com/problems/min-xor-value/)
+
+### 6. **Number of Subarrays with Bitwise OR ≥ K**
+
+* Count or sum subarrays where OR is at least K.
+* Uses binary search or two pointers combined with bit checks.
+
+### 7. **Longest Subarray where Bitwise AND is Non-zero**
+
+* Find longest subarray where AND of all elements is > 0 (i.e., all elements share a common bit).
+* Use two pointers or segment trees.
+
+### 8. **Subarray with Bitwise XOR Zero**
+
+* Find subarrays whose XOR is zero.
+* Related to prefix XOR and hashing.
+
+### 9. **Count Subarrays with Bitwise AND equal to a given value**
+
+* A more specialized problem, usually requires advanced data structures or segment trees.
+
+---
+
+## Other Related DSA Concepts Often Used Alongside Bitwise Subarray Problems
+
+| Concept                | Example Problem or Use Case                             |
+| ---------------------- | ------------------------------------------------------- |
+| Prefix XOR/Prefix Sum  | Counting subarrays with certain XOR or sum property.    |
+| Sliding Window         | For fixed or variable size subarray conditions.         |
+| Two Pointers           | For expanding/shrinking subarrays efficiently.          |
+| Monotonic Stack        | For managing AND/OR segments where bit patterns change. |
+| Trie                   | For max/min XOR queries on prefixes or pairs.           |
+| Contribution Technique | Counting how many subarrays each bit contributes to OR. |
+
+---
+
+## Want me to provide detailed explanations and code snippets for any of these?
+
+Or help you create a practice roadmap around these?
