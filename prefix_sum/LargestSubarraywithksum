@@ -1,5 +1,7 @@
 // User function Template for Java
 //Here we are using index to keep start and end index using it difference we can do it and calculate it.
+//Here we are only inserting in the hashmap only when the sum is not present because if it's present then we should  not add it as we are calculating max
+// and it will decrease size
 class Solution {
     public int longestSubarray(int[] arr, int k) {
         // code here
