@@ -1,1 +1,96 @@
 
+TO CALCULATE SUBMATRIX SUM TWO POINT SHOULD BE IN MIND FOR CREATING PREFIX MATRIX AND FOR QUERYIES-
+
+Absolutely! Let's break down these **two related but separate steps**:
+
+---
+
+## ✅ **STEP 1: Building the Prefix Sum Matrix**
+
+You want to build a `prefix[i][j]` that holds the **sum of elements from (0,0) to (i,j)** — i.e., the rectangle from the top-left corner to the current cell.
+
+### Formula:
+
+```java
+prefix[i][j] = A[i][j]
+             + prefix[i-1][j]    // sum of above
+             + prefix[i][j-1]    // sum of left
+             - prefix[i-1][j-1]; // subtract the overlap (top-left)
+```
+
+### Why subtract `prefix[i-1][j-1]`?
+
+Because both `prefix[i-1][j]` (above) and `prefix[i][j-1]` (left) **include the top-left corner area** (`prefix[i-1][j-1]`). So it's **added twice**, and we subtract it **once** to fix the double-counting.
+
+---
+
+### Example:
+
+Matrix A:
+
+```
+1 2 3
+4 5 6
+7 8 9
+```
+
+Let’s compute `prefix[1][1]`, which should be the sum of:
+
+```
+1 2
+4 5
+```
+
+Expected sum = 1 + 2 + 4 + 5 = 12
+
+Using the formula:
+
+```
+prefix[1][1] = A[1][1]         = 5
+             + prefix[0][1]    = 3  (1+2)
+             + prefix[1][0]    = 5  (1+4)
+             - prefix[0][0]    = 1
+           = 5 + 3 + 5 - 1 = 12 ✔️
+```
+
+---
+
+## ✅ **STEP 2: Querying the Sum of a Submatrix**
+
+You are given a top-left `(r1, c1)` and bottom-right `(r2, c2)` of a submatrix.
+You use the full prefix sum matrix to quickly get the sum of only that rectangle.
+
+### Formula:
+
+```java
+sum = prefix[r2][c2]
+    - prefix[r1-1][c2]   // remove above
+    - prefix[r2][c1-1]   // remove left
+    + prefix[r1-1][c1-1] // add overlap back
+```
+
+### Why subtract above and left?
+
+You started with the full area from `(0,0)` to `(r2,c2)` — that’s **too big**.
+So you remove:
+
+* The rectangle **above** your submatrix.
+* The rectangle **left** of your submatrix.
+
+### Why add back `prefix[r1-1][c1-1]`?
+
+Because the above and left areas **overlap** in the **top-left corner**, and we **subtracted that part twice**, so we **add it back once**.
+
+---
+
+### Summary of both steps:
+
+| Step              | What you’re doing                                  | Why subtract `prefix[i-1][j-1]`?                  |
+| ----------------- | -------------------------------------------------- | ------------------------------------------------- |
+| ✅ Building Prefix | Avoid **double-counting** area during construction | Because it's **added twice** by top and left      |
+| ✅ Querying Sum    | Avoid **overcounting** when extracting a submatrix | Because it's **subtracted twice** by above & left |
+
+---
+
+Let me know if you want a diagram or code version to reinforce this further!
+
