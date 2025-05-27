@@ -1,0 +1,83 @@
+Absolutely! In 2D matrix problems, interviewers typically focus on **these core themes**:
+
+---
+
+## ✅ I. **Submatrix / Subarray Sum Problems**
+
+Focus: sum of rectangular regions, optimization, prefix sum, or Kadane’s.
+
+| Problem Type                          | Techniques Used                            | Example Problems      |
+| ------------------------------------- | ------------------------------------------ | --------------------- |
+| Sum of submatrix (single query)       | 2D Prefix Sum                              | \[i,j] to \[x,y]      |
+| Sum of submatrix (multiple queries)   | Precompute 2D prefix                       |                       |
+| Maximum sum submatrix (any size)      | Kadane’s 2D                                |                       |
+| Maximum sum submatrix under a value K | Kadane’s + BST (TreeSet) or Sliding Window | Hard variant          |
+| Count submatrices with sum K          | Prefix sum + HashMap                       | Like subarray sum = k |
+
+---
+
+## ✅ II. **Matrix Traversal Patterns**
+
+Focus: simulate directions, recursion, boundaries
+
+| Pattern                              | Techniques Used              | Example Problems              |
+| ------------------------------------ | ---------------------------- | ----------------------------- |
+| Spiral order traversal               | Simulation, direction arrays | Spiral Matrix I & II          |
+| Diagonal traversal                   | Coordinate manipulation      | Diagonal Zig-Zag of 2D matrix |
+| Boundary traversal                   | Layer-by-layer simulation    |                               |
+| Snake pattern traversal              | Even/odd row trick           |                               |
+| Zigzag traversal (used in trees too) | Queue + direction toggle     |                               |
+
+---
+
+## ✅ III. **Matrix Transformations / Modifications**
+
+Focus: in-place changes, coordinate formulas
+
+| Problem Type                        | Techniques Used                         | Example Problems              |
+| ----------------------------------- | --------------------------------------- | ----------------------------- |
+| Rotate matrix by 90/180/270 degrees | Transpose + reverse                     | Rotate Image (LC 48)          |
+| Transpose of matrix                 | Swap `matrix[i][j]` with `matrix[j][i]` |                               |
+| Set Matrix Zeroes                   | In-place marking                        | LC 73                         |
+| Flip image horizontally/vertically  | Row or column reversal                  | Flip and Invert Binary Matrix |
+| Shift matrix                        | Coordinate mapping                      | Shift 2D Grid (LC 1260)       |
+
+---
+
+## ✅ IV. **Matrix Path Problems**
+
+Focus: DFS, BFS, DP
+
+| Problem Type                                  | Techniques Used     | Example Problems       |
+| --------------------------------------------- | ------------------- | ---------------------- |
+| Number of paths from top-left to bottom-right | DP, memoization     | Unique Paths I/II      |
+| Word Search / Letter Matching                 | DFS + backtracking  | Word Search (LC 79)    |
+| Island counting / flood fill                  | DFS/BFS             | Number of Islands      |
+| Longest increasing path in matrix             | DFS + memoization   | Hard problem           |
+| Matrix traversal with constraints             | BFS + visited\[]\[] | Shortest Path problems |
+
+---
+
+## ✅ V. **Other Matrix-Based Questions**
+
+| Type                         | Examples                           |
+| ---------------------------- | ---------------------------------- |
+| Sudoku Validator/Solver      | Backtracking                       |
+| Matrix multiplication        | Math-heavy                         |
+| Distance from nearest 0/1    | BFS from multiple sources (LC 542) |
+| Image processing simulations | Game of Life (LC 289)              |
+
+---
+
+## 🔥 Most Commonly Asked in Interviews:
+
+* ✅ Max sum submatrix (with prefix sum / Kadane)
+* ✅ Spiral traversal
+* ✅ Rotate matrix 90°
+* ✅ Word search
+* ✅ Number of Islands / flood fill
+* ✅ Matrix DP like Unique Paths, Minimum Path Sum
+
+---
+
+Would you like me to turn this into a table/file for easy future reference? I can also give you a curated Leetcode list for each category.
