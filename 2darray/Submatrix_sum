@@ -1,0 +1,74 @@
+## 📘 Subarray vs Submatrix Sum Contribution Technique
+
+---
+
+### ✅ 1D Subarray: Sum of All Subarrays
+
+For an array `arr` of size `n`, each element contributes to several subarrays. The contribution of `arr[i]` is:
+
+```
+count = (i + 1) * (n - i)
+contribution = arr[i] * count
+```
+
+**Explanation:**
+
+* `(i + 1)` choices for starting point (from 0 to i)
+* `(n - i)` choices for ending point (from i to n-1)
+
+**Total sum of all subarrays**:
+
+```java
+long total = 0;
+for (int i = 0; i < n; i++) {
+    total += (long)(i + 1) * (n - i) * arr[i];
+}
+```
+
+---
+
+### ✅ 2D Submatrix: Sum of All Submatrices
+
+For a matrix `A` of size `N x M`, each element `A[i][j]` contributes to many submatrices.
+
+**Formula:**
+
+```
+count = (i + 1) * (j + 1) * (N - i) * (M - j)
+contribution = A[i][j] * count
+```
+
+**Explanation:**
+
+* `(i + 1)` ways to choose top row (0 to i)
+* `(j + 1)` ways to choose left column (0 to j)
+* `(N - i)` ways to choose bottom row (i to N-1)
+* `(M - j)` ways to choose right column (j to M-1)
+
+**Total sum of all submatrices**:
+
+```java
+long total = 0;
+for (int i = 0; i < N; i++) {
+    for (int j = 0; j < M; j++) {
+        long topLeft = (i + 1) * (j + 1);
+        long bottomRight = (N - i) * (M - j);
+        total += (long)A[i][j] * topLeft * bottomRight;
+    }
+}
+```
+
+---
+
+### 🔁 Summary Table
+
+| Concept           | Subarray (1D)             | Submatrix (2D)                          |
+| ----------------- | ------------------------- | --------------------------------------- |
+| Contribution      | `(i + 1) * (n - i)`       | `(i + 1) * (j + 1) * (N - i) * (M - j)` |
+| Element inclusion | Appears in many subarrays | Appears in many submatrices             |
+| Total sum formula | Sum all contributions     | Sum all contributions                   |
+| Time complexity   | O(n)                      | O(N x M)                                |
+
+---
+
+Use this pattern when asked to find total sum over all subarrays or submatrices without generating them individually.
