@@ -1,0 +1,53 @@
+//Here for solving it first need to solve for 2 and 3
+//for 2 first we move n-1 that is 1 to auxillory and biggest one to the destination and then through auxillory to destination
+//for 3 -
+  | Step | Move                                |
+| ---- | ----------------------------------- |
+| 1    | Move disk 1 from Tower 1 to Tower 3 |
+| 2    | Move disk 2 from Tower 1 to Tower 2 |
+| 3    | Move disk 1 from Tower 3 to Tower 2 |
+| 4    | Move disk 3 from Tower 1 to Tower 3 |
+| 5    | Move disk 1 from Tower 2 to Tower 1 |
+| 6    | Move disk 2 from Tower 2 to Tower 3 |
+| 7    | Move disk 1 from Tower 1 to Tower 3 |
+
+****So we are in a pattern in which we are moving first n-1 disk from source to auxillory with the help of destination and then from nth disk from the
+source to desination and then auxillory to desination with help of source so same thing we will do in the code
+
+First, the problem is reduced by moving the top n-1 disks to the auxiliary tower (Tower 2).
+
+Then, the largest disk (disk 3) moves directly to the destination tower (Tower 3).
+
+Finally, the n-1 disks are moved from auxiliary (Tower 2) to destination (Tower 3).
+
+
+
+public class Solution {
+    List<int[]> moves = new ArrayList<>();
+
+    public int[][] towerOfHanoi(int A) {
+        int source=1;
+        int auxilory=2;
+        int destination=3;
+        print(A,source,auxilory,destination);
+        int[][] result = new int[moves.size()][3];
+        for (int i = 0; i < moves.size(); i++) {
+            result[i] = moves.get(i);
+        }
+        return result;
+    }
+    public void print(int A,int source,int auxilory,int destination)
+    {
+        if(A==1)
+        {
+         moves.add(new int[]{1, source,destination});
+        return;
+        }
+        // Step 1: Move top n-1 disks from source to auxiliary
+        print(A-1,source,destination,auxilory);
+        // Step 2: Move nth (largest) disk from source to destination
+        moves.add(new int[]{A, source,destination});
+        // Step 3: Move n-1 disks from auxiliary to destination
+        print(A-1,auxilory,source,destination);
+    }
+}
