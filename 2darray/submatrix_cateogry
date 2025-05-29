@@ -1,0 +1,61 @@
+Perfect — below is a categorized list of **similar LeetCode problems** you can include under each of the 3 approaches in your GitHub repo.
+
+---
+
+## ✅ `1_submatrix_sum_equals_target/`
+
+**Core Idea:** 2D Prefix Sum + HashMap (for target sum in 1D)
+
+| Problem Name                                 | LeetCode ID                                                                     | Notes                           |
+| -------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------- |
+| **Number of Submatrices That Sum to Target** | [1074](https://leetcode.com/problems/number-of-submatrices-that-sum-to-target/) | 🔥 Classic prefix+hashmap       |
+| Subarray Sum Equals K (1D version)           | [560](https://leetcode.com/problems/subarray-sum-equals-k/)                     | 1D base of this approach        |
+| Count Number of Nice Subarrays               | [1248](https://leetcode.com/problems/count-number-of-nice-subarrays/)           | Variant of 1D hash-prefix       |
+| Subarray Sum Divisible by K                  | [974](https://leetcode.com/problems/subarray-sum-divisible-by-k/)               | Similar pattern with mod logic  |
+| Binary Subarrays With Sum                    | [930](https://leetcode.com/problems/binary-subarrays-with-sum/)                 | Variation of fixed target in 1D |
+
+---
+
+## ✅ `2_submatrix_sum_no_larger_than_k/`
+
+**Core Idea:** Prefix Sum + TreeSet (to track closest prefix)
+
+| Problem Name                               | LeetCode ID                                                                   | Notes                                |
+| ------------------------------------------ | ----------------------------------------------------------------------------- | ------------------------------------ |
+| **Max Sum of Rectangle No Larger Than K**  | [363](https://leetcode.com/problems/max-sum-of-rectangle-no-larger-than-k/)   | 🔥 Core problem                      |
+| Maximum Subarray Sum No Larger Than K (1D) | –                                                                             | Appears inside 2D version            |
+| Maximum Subarray Sum with One Deletion     | [1186](https://leetcode.com/problems/maximum-subarray-sum-with-one-deletion/) | Related via 1D prefix max tracking   |
+| Find the Closest Subsequence Sum           | [1755](https://leetcode.com/problems/closest-subsequence-sum/)                | Meet-in-middle with prefix sums      |
+| Partition Array for Maximum Sum            | [1043](https://leetcode.com/problems/partition-array-for-maximum-sum/)        | Different idea, but max segment sums |
+| Maximum Sum of Subarray Close to K         | \[Not on Leetcode]                                                            | Common variation in interviews       |
+
+---
+
+## ✅ `3_count_all_1_submatrices/`
+
+**Core Idea:** Histogram-based + Upward rectangle count
+
+| Problem Name                             | LeetCode ID                                                                    | Notes                                      |
+| ---------------------------------------- | ------------------------------------------------------------------------------ | ------------------------------------------ |
+| **Count Submatrices With All Ones**      | [1504](https://leetcode.com/problems/count-submatrices-with-all-ones/)         | 🔥 Core histogram logic                    |
+| Maximal Rectangle                        | [85](https://leetcode.com/problems/maximal-rectangle/)                         | Classic variation (largest 1-rectangle)    |
+| Largest Rectangle in Histogram           | [84](https://leetcode.com/problems/largest-rectangle-in-histogram/)            | 1D version                                 |
+| Count Square Submatrices with All Ones   | [1277](https://leetcode.com/problems/count-square-submatrices-with-all-ones/)  | DP-based square count                      |
+| Maximal Square                           | [221](https://leetcode.com/problems/maximal-square/)                           | DP to compute largest square of 1s         |
+| Number of Subarrays With Bounded Maximum | [795](https://leetcode.com/problems/number-of-subarrays-with-bounded-maximum/) | Similar counting with sliding window       |
+| Largest Plus Sign                        | [764](https://leetcode.com/problems/largest-plus-sign/)                        | Extension on counting consecutive 1s in 2D |
+
+---
+
+## 🧠 Bonus: Suggested Naming for Each File
+
+Inside each folder:
+
+* `README.md` — explain logic + complexity
+* `solution_brute.java` — if applicable
+* `solution_optimal.java` — final optimal logic
+* `related_problems.md` — list of similar problems with links
+
+---
+
+Let me know if you’d like me to generate the markdown structure or Java templates for these — I can do that instantly for you.
