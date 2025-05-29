@@ -1,0 +1,73 @@
+Great! Here's a **clear list of submatrix-based problems**, categorized by which **prefix sum approach** you should use:
+
+---
+
+## ✅ **Category 1: Use 2D Prefix Sum Matrix**
+
+(When top-left and bottom-right coordinates are **fixed or queried**)
+
+> Build a 2D prefix matrix and use:
+>
+> ```
+> sum = prefix[r2][c2]
+>     - prefix[r1-1][c2]
+>     - prefix[r2][c1-1]
+>     + prefix[r1-1][c1-1]
+> ```
+
+### 🔹 Problems:
+
+| # | Problem Title                                      | Platforms                                                                    |
+| - | -------------------------------------------------- | ---------------------------------------------------------------------------- |
+| 1 | **Submatrix Sum Queries**                          | InterviewBit, GFG                                                            |
+| 2 | **Matrix Sum Query**                               | LeetCode/GFG variants                                                        |
+| 3 | **Maximum Submatrix Sum for Given Coordinates**    | Custom problems                                                              |
+| 4 | **Range Sum Query 2D – Immutable**                 | Leetcode [#304](https://leetcode.com/problems/range-sum-query-2d-immutable/) |
+| 5 | **Sum of All Submatrices** (contribution approach) | Theory problem                                                               |
+
+👉 **When to use**: When you’re answering queries on submatrix sums with **given corners**.
+
+---
+
+## ✅ **Category 2: Use Row-Pair + 1D Prefix Sum + HashMap**
+
+(When you need to **check all submatrices** or count submatrices with specific sum)
+
+> Compress between two rows to 1D, then solve with:
+>
+> * Prefix sum
+> * HashMap to track subarray sums
+
+### 🔹 Problems:
+
+| # | Problem Title                             | Platforms                                                                                 |
+| - | ----------------------------------------- | ----------------------------------------------------------------------------------------- |
+| 1 | **Count Submatrices That Sum to Target**  | LeetCode [#1074](https://leetcode.com/problems/number-of-submatrices-that-sum-to-target/) |
+| 2 | **Maximum Sum Rectangle in a 2D Matrix**  | GFG, LeetCode (Kadane 2D)                                                                 |
+| 3 | **Max Sum Submatrix No Larger Than K**    | LeetCode [#363](https://leetcode.com/problems/max-sum-of-rectangle-no-larger-than-k/)     |
+| 4 | **Number of Submatrices with All 1s**     | LeetCode [#1504](https://leetcode.com/problems/count-submatrices-with-all-ones/)          |
+| 5 | **Largest Submatrix with Rearrangements** | LeetCode [#1727](https://leetcode.com/problems/largest-submatrix-with-rearrangements/)    |
+
+👉 **When to use**: When the problem involves **finding/counting all submatrices** with:
+
+* specific target sum,
+* largest value,
+* maximum area,
+* satisfying a condition (like all 1s).
+
+---
+
+## 🧠 Quick Decision Guide:
+
+| Problem Asks For...                    | Use Prefix Type         |
+| -------------------------------------- | ----------------------- |
+| Sum of one given submatrix             | ✅ 2D prefix matrix      |
+| Many queries on different submatrices  | ✅ 2D prefix matrix      |
+| Count of submatrices with sum = target | ✅ Row-pair + HashMap    |
+| Max sum submatrix                      | ✅ Row-pair + Kadane     |
+| Count submatrices with all 1s          | ✅ Row-pair or histogram |
+| Range sum from (x1,y1) to (x2,y2)      | ✅ 2D prefix matrix      |
+
+---
+
+Would you like a printable cheat sheet for this?
