@@ -1,0 +1,109 @@
+Yes — **this is a well-known interview pattern**, and MANY questions are based on this exact idea.
+
+This pattern is called:
+
+# ⭐ **Staircase Search Pattern**
+
+(or "Top-Right Pointer Pattern" / “Row & Column Sorted Matrix Pattern”)
+
+Whenever a matrix is **sorted row-wise AND column-wise**, this pattern applies.
+
+---
+
+# ✅ Core conditions for this pattern
+
+You can use the staircase pattern when:
+
+* Rows are sorted
+* Columns are sorted
+* (Usually both in non-decreasing order)
+
+Then you can start at **top-right** or **bottom-left** and move:
+
+* **Left** if value is too big
+* **Down** if value is too small
+
+---
+
+# 📚 Common Questions Based on This Pattern
+
+Here is a list of classic interview questions that use this exact trick:
+
+---
+
+## **🟩 1. Search in a row-column sorted matrix**
+
+Find target in matrix where each row & column is sorted.
+**Use staircase search** → O(N + M).
+
+---
+
+## **🟩 2. Count elements ≤ X in sorted matrix**
+
+Very common in finding the **median of a matrix**.
+Also uses the same staircase traversal.
+
+---
+
+## **🟩 3. Row with maximum 1s (your current question)**
+
+Use exactly the same trick → O(N + M).
+
+---
+
+## **🟩 4. Find the k-th smallest element in sorted matrix**
+
+Also uses counting elements ≤ mid using staircase scan.
+
+---
+
+## **🟩 5. Find smallest element >= target**
+
+Two-pointer movement from top-right.
+
+---
+
+## **🟩 6. Searching for a peak in 2D sorted matrix**
+
+Some companies also adapt it from this idea.
+
+---
+
+## **🟩 7. Find number of negative numbers in sorted matrix**
+
+ZEROes then NEGATIVE numbers → similar movement work.
+
+---
+
+# 🎯 Key idea behind all of them:
+
+**Once you move left or down, you NEVER go back.
+So total moves = rows + columns.**
+
+That’s why these problems all become **O(N + M)** instead of **O(N²)**.
+
+---
+
+# 🧠 How to recognize the pattern instantly in interviews?
+
+Ask yourself:
+
+### “Is the matrix sorted row-wise AND column-wise?”
+
+If **yes**, immediately think:
+
+👉 “Start at top-right and staircase-walk.”
+
+### “Am I trying to count something or find something in each row?”
+
+If rows are sorted AND columns sorted → **use staircase**.
+
+---
+
+# 🎁 If you want, I can give you:
+
+* A cheat sheet summarizing the pattern
+* 10 practice problems of this exact type
+* Code templates for all of them
+
+Just tell me!
