@@ -1,7 +1,7 @@
 //To search in rotated sorted array er vheck if the left half or the right half is sorted or not to comparing start with mid 
-//and with mid with end if the sart is less then mid swe know left half is sorteed and if target is greater then start and smaller then mid
-// then we know the answer is in the left half other wise the answer is in the right half
-// and we also check if the mid is less then end if its is we know that right half is sorted and we check if target is greater
+//and with mid with end if the start is less then mid so we know left half is sorteed and if target is greater then start and smaller then mid
+// then we know the answer is in the left half, other wise the answer is in the right half
+// and then we also check if the mid is less then end if its is we know that right half is sorted and we check if target is greater
 //then mid and smaller then end if it isthen we know answer will be in the right half other wise will move left half
 // with end=mid-1;
 class Solution {
