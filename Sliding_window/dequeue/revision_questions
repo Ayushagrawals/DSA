@@ -1,0 +1,237 @@
+# Sliding Window Revision Guide
+
+You do NOT need to revise 50 sliding window questions repeatedly.
+
+For strong retention, you mainly need:
+
+* 8–12 representative problems
+* Covering all major sliding window patterns
+* Enough to rebuild logic during interviews
+
+---
+
+# 1. Fixed Size Sliding Window (2 Questions)
+
+These teach:
+
+* `j - i + 1 == k`
+* add incoming element
+* remove outgoing element
+
+## Questions
+
+### Maximum Sum Subarray of Size K
+
+Teaches:
+
+* basic fixed-size window
+* rolling sum optimization
+
+---
+
+### First Negative Number in Every Window
+
+Teaches:
+
+* queue synchronization
+* removing expired elements
+
+Very important queue-based sliding window problem.
+
+---
+
+# 2. Variable Size Sliding Window (4 Questions)
+
+MOST IMPORTANT category.
+
+## Questions
+
+### Longest Substring Without Repeating Characters
+
+Teaches:
+
+* hashmap
+* shrinking logic
+* duplicate handling
+
+---
+
+### Max Consecutive Ones III
+
+Teaches:
+
+* window validity
+* condition-based shrinking
+
+---
+
+### Fruit Into Baskets
+
+Teaches:
+
+* at most K distinct
+* hashmap frequency logic
+
+Very important template problem.
+
+---
+
+### Longest Repeating Character Replacement
+
+Teaches:
+
+* frequency optimization
+* maintaining max frequency
+
+---
+
+# 3. Exactly K Pattern (2 Questions)
+
+Very important interview pattern.
+
+## Questions
+
+### Subarray with K Different Integers
+
+Teaches:
+
+```text
+exactly(k) = atMost(k) - atMost(k-1)
+```
+
+---
+
+### Count Number of Nice Subarrays
+
+Same exact pattern.
+
+---
+
+# 4. Minimum Window Pattern (1 Question)
+
+## Minimum Window Substring
+
+Teaches:
+
+* aggressive shrinking
+* maintaining valid window
+* hashmap synchronization
+
+Very important hard sliding window pattern.
+
+---
+
+# 5. Deque / Monotonic Queue (2 Questions)
+
+Main deque revision problems.
+
+## Sliding Window Maximum ⭐
+
+MOST IMPORTANT deque problem.
+
+Teaches:
+
+* removing smaller useless elements
+* monotonic deque
+* maintaining maximum efficiently
+
+---
+
+## Longest Continuous Subarray With Absolute Diff <= Limit
+
+Teaches:
+
+* two deques together
+* max/min window maintenance
+
+Advanced deque pattern.
+
+---
+
+# Total Questions To Revise
+
+You only need:
+
+* 10–12 good representative questions
+
+NOT:
+
+* 100 repeated problems
+
+The goal is:
+
+* pattern mastery
+* not memorizing every question
+
+---
+
+# Weekly Revision Strategy
+
+## Every Week
+
+* 2 old revision questions
+* 1 new question
+
+---
+
+# Monthly Revision
+
+Do:
+
+* one deque problem
+* one hashmap sliding window
+* one fixed window problem
+
+This keeps memory active long-term.
+
+---
+
+# Most Important Thing To Remember
+
+You are NOT memorizing:
+
+* questions
+
+You are memorizing:
+
+* patterns
+
+Once patterns become stable:
+
+* new questions become derivable
+
+---
+
+# Queue / Deque Core Questions
+
+| Problem                     | Data Structure |
+| --------------------------- | -------------- |
+| First Negative Number       | Queue          |
+| Sliding Window Maximum      | Deque          |
+| Longest Continuous Subarray | Two Deques     |
+
+These 3 cover most queue/deque sliding window concepts.
+
+---
+
+# One-Page Cheat Sheet
+
+## Queue Sliding Window Rules
+
+```text
+1. Add useful elements
+2. Remove expired elements
+3. Front = answer
+```
+
+---
+
+## Deque Rules
+
+```text
+1. Remove expired indexes
+2. Remove smaller useless elements
+3. Front stores max/min
+```
+
+This style of revision is extremely effective for long-term retention.
