@@ -1,0 +1,292 @@
+Yes — this problem is actually the starting point for an important category:
+
+# Sliding Window + Queue/Deque Problems
+
+These problems teach:
+
+```text id="h0w3k7"
+maintaining useful elements inside moving window
+```
+
+Very important for interviews.
+
+---
+
+# Progression Path You Should Follow
+
+## Level 1 — Queue Based (Easy → Medium)
+
+These teach:
+
+* storing useful elements
+* removing expired elements
+* window synchronization
+
+---
+
+## 1. First Negative Number in Every Window
+
+Pattern:
+
+```text id="l7p9e2"
+fixed sliding window + queue
+```
+
+You already did this.
+
+---
+
+## 2. Count Occurrences of Anagrams
+
+Pattern:
+
+```text id="c2j4x8"
+fixed window + hashmap
+```
+
+Important for:
+
+* character frequency
+* shrinking/expanding logic
+
+---
+
+## 3. Maximum Sum Subarray of Size K
+
+Pattern:
+
+```text id="o8x1d6"
+classic fixed sliding window
+```
+
+Foundation problem.
+
+---
+
+# Level 2 — Monotonic Deque Problems
+
+These are very important.
+
+---
+
+# 4. Sliding Window Maximum ⭐
+
+Very famous interview question.
+
+Given:
+
+```text id="j4z7v3"
+window size k
+```
+
+Return:
+
+```text id="x1m9r5"
+maximum element in every window
+```
+
+Example:
+
+```text id="v6n4b2"
+[1,3,-1,-3,5,3,6,7]
+k = 3
+
+Output:
+[3,3,5,5,6,7]
+```
+
+---
+
+# Core Idea
+
+Deque maintains elements in:
+
+```text id="u9f2k1"
+decreasing order
+```
+
+Front always contains maximum.
+
+---
+
+# Why This Problem Is Important
+
+It teaches:
+
+* monotonic deque
+* removing smaller useless elements
+* O(n) optimization
+
+This is a VERY important interview pattern.
+
+---
+
+# 5. Sliding Window Minimum
+
+Same as maximum.
+
+But deque maintained in:
+
+```text id="v0m5z8"
+increasing order
+```
+
+---
+
+# 6. Longest Continuous Subarray With Absolute Diff <= Limit
+
+Harder.
+
+Uses:
+
+```text id="n7q3d1"
+two deques
+```
+
+One for:
+
+* max
+* min
+
+Very important advanced deque problem.
+
+---
+
+# 7. Shortest Subarray With Sum At Least K ⭐
+
+Hard problem.
+
+Uses:
+
+```text id="g4w8p0"
+prefix sum + monotonic deque
+```
+
+This is one of the most important deque interview questions.
+
+---
+
+# 8. Constrained Subsequence Sum
+
+Advanced monotonic deque DP problem.
+
+Appears in:
+
+* Google
+* Uber
+* Meta
+
+---
+
+# Core Deque Concepts
+
+You’ll repeatedly see these operations:
+
+---
+
+## Remove expired elements
+
+```java id="f7p1w5"
+if (dq.peekFirst() < i) {
+    dq.pollFirst();
+}
+```
+
+---
+
+## Remove useless smaller elements
+
+```java id="n2x8k4"
+while (!dq.isEmpty() && arr[dq.peekLast()] < arr[j]) {
+    dq.pollLast();
+}
+```
+
+---
+
+## Add current element
+
+```java id="c9v4m7"
+dq.offerLast(j);
+```
+
+---
+
+# Very Important Pattern Recognition
+
+## Queue Problems
+
+Store:
+
+```text id="d4r8k0"
+useful candidates
+```
+
+---
+
+## Deque Problems
+
+Maintain:
+
+```text id="s5y2n1"
+ordered useful candidates
+```
+
+Usually:
+
+* increasing
+* decreasing
+
+---
+
+# Interview Importance
+
+For your experience level (5.5 years), companies may ask:
+
+* Sliding Window Maximum
+* Monotonic Queue
+* Rate limiter style questions
+* Stream processing style logic
+
+Especially:
+
+* Walmart
+* Amazon
+* Adobe
+* Flipkart
+* Paytm
+* Uber
+
+---
+
+# Suggested Order For You
+
+Do in this order:
+
+1. First Negative Number
+2. Sliding Window Maximum ⭐
+3. Sliding Window Minimum
+4. Longest Subarray Absolute Diff <= Limit
+5. Shortest Subarray With Sum >= K
+
+This gives strong deque mastery.
+
+---
+
+# Real World Systems Analogy
+
+Deque problems are used in:
+
+* real-time monitoring
+* moving averages
+* stream analytics
+* stock systems
+* CPU spike monitoring
+* rate limiting
+* fraud detection
+
+because:
+
+```text id="m8q0t6"
+they efficiently maintain window extremes in O(1)
+```
