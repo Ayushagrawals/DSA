@@ -8,30 +8,66 @@
 //Given the integer array fruits, return the maximum number of fruits you can pick.
 
 //same as two distinct here two bucket is the hashmap size and all should be picked so it is subarray  can't be skipped
-class Solution {
-    public int totalFruit(int[] fruits) {
-        Map<Integer,Integer> m=new HashMap<Integer,Integer>();
-        int start=0;
-        int end=0;
-        int maxfruit=0;
-        for(int i=0;i<fruits.length;i++)
-        {
-            
-            m.put(fruits[i],m.getOrDefault(fruits[i],0)+1);
-            while(m.size()>2)
-            {
-                if(m.get(fruits[start])>1)
-                {
-                    int val=m.get(fruits[start]);
-                    m.put(fruits[start],val-1);
+import java.util.*;
+
+public class FruitIntoBaskets {
+
+    public static int totalFruit(int[] fruits) {
+
+        // HashMap stores:
+        // fruit -> frequency inside current window
+
+        Map<Integer, Integer> map = new HashMap<>();
+
+        int i = 0;
+
+        int maxLen = 0;
+
+        // j = window end
+        for (int j = 0; j < fruits.length; j++) {
+
+            // STEP 1:
+            // Add current fruit into hashmap
+
+            map.put(fruits[j],
+                    map.getOrDefault(fruits[j], 0) + 1);
+
+            // STEP 2:
+            // If more than 2 distinct fruits,
+            // window becomes invalid
+
+            while (map.size() > 2) {
+
+                // Remove left fruit frequency
+
+                map.put(fruits[i],
+                        map.get(fruits[i]) - 1);
+
+                // If frequency becomes 0,
+                // remove completely from hashmap
+
+                if (map.get(fruits[i]) == 0) {
+                    map.remove(fruits[i]);
                 }
-                else{
-                    m.remove(fruits[start]);
-                }
-            start+=1;
+
+                // Shrink window
+                i++;
             }
-            maxfruit=Math.max(maxfruit,i-start+1);
+
+            // STEP 3:
+            // Current window is valid
+            // update maximum answer
+
+            maxLen = Math.max(maxLen, j - i + 1);
         }
-        return maxfruit;
+
+        return maxLen;
+    }
+
+    public static void main(String[] args) {
+
+        int[] fruits = {1, 2, 1, 2, 3};
+
+        System.out.println(totalFruit(fruits));
     }
 }
